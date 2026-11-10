@@ -1,0 +1,319 @@
+---
+title: "Statement of Work No. LVH-2026-014"
+subtitle: "Project Clearpath: Prior Authorization Modernization"
+---
+
+**FICTIONAL DOCUMENT. FOR DEMONSTRATION ONLY.** Larkspur Valley Health, its people, figures and contract terms are invented for the IBM Process Studio Skillathon. No client data is used.
+
+**Statement of Work No. LVH-2026-014**
+**Project Clearpath: Prior Authorization Modernization**
+
+This Statement of Work ("SOW") is entered into as of November 23, 2026 (the "SOW Date") by and between Larkspur Valley Health, Inc. ("Client" or "LVH") and International Business Machines Corporation ("IBM"), and is governed by the Master Services Agreement between the parties dated March 2, 2023 (the "Agreement"). Capitalized terms not defined in this SOW have the meanings given in the Agreement. If there is a conflict between this SOW and the Agreement, the Agreement controls unless this SOW expressly states otherwise.
+
+# 1. Background and Client Environment
+
+## 1.1 About the Client
+
+Larkspur Valley Health, Inc. is a not-for-profit integrated delivery and financing system headquartered at the Riverbend Campus in Columbus, Ohio. LVH employs approximately 21,000 people and reported consolidated operating revenue of $6.8 billion in fiscal year 2026. LVH operates through three divisions: (a) Larkspur Hospitals & Clinics, which runs six acute care hospitals, 140 ambulatory sites and the Larkspur Medical Group; (b) Larkspur Health Plan, Inc. ("the Plan"), a wholly owned health plan subsidiary; and (c) LVH Shared Services, which provides Information Technology, Information Security, Finance, Human Resources and Legal & Privacy services to both operating divisions.
+
+## 1.2 About the Plan
+
+The Plan serves approximately 640,000 members across three lines of business: Medicare Advantage (approximately 180,000 members), Medicaid managed care (approximately 290,000 members) and Commercial and individual marketplace products (approximately 170,000 members). The Plan's strategic plan for 2026 through 2028, titled "Simpler Care, Sooner," names reduction of administrative burden on providers and faster access to care for members as its first two enterprise priorities. The Plan President reports to the LVH Chief Executive Officer.
+
+## 1.3 Organizations in Scope
+
+The Services will primarily affect the Utilization Management department ("UM"), which sits within the Plan's Clinical Operations function under the Plan Chief Medical Officer. UM employs approximately 260 staff, consisting of approximately 95 intake coordinators, 140 nurse reviewers, 12 physician medical directors and 13 UM analysts, organized into three teams: Intake & Triage, Clinical Review and Physician Review. The Services will also involve the Plan's Provider Network Services department, which manages provider relations and the provider portal; the Plan's Member Services department, which handles member inquiries about authorization status; the Plan's Compliance Office; and, within LVH Shared Services, the Enterprise Applications group of Information Technology, which operates the Client's utilization management platform (the "UM Platform"), as well as Information Security and Human Resources. Larkspur Hospitals & Clinics is itself a high-volume submitter of prior authorization requests to the Plan and will participate as a pilot provider group.
+
+The Plan's Appeals & Grievances department, the pharmacy benefit (administered by the Client's pharmacy benefit manager) and behavioral health utilization management (delegated to a third-party behavioral health organization) are not in scope, except as described in Section 5.
+
+## 1.4 Current State of Prior Authorization
+
+The Plan received approximately 410,000 prior authorization requests in the twelve months ending September 30, 2026. Approximately 38% of requests were received by fax, 12% by telephone and 50% through the provider portal. Requests received by fax or telephone are manually keyed into the UM Platform by intake coordinators, which takes an average of 22 minutes per request. Approximately 18% of all requests are submitted for services that do not require prior authorization under the member's benefit plan. Approximately 42% of requests are pended for missing clinical documentation, which adds an average of 3.2 calendar days to the decision. Nurse reviewers apply licensed clinical criteria to determine medical necessity and escalate approximately 14% of requests to a physician medical director. Determinations are communicated by fax and letter, and providers place an average of 1.8 status calls per request to the Plan's provider services line.
+
+For standard (non-urgent) requests, the median time from receipt to determination is 9.4 calendar days. For expedited requests, the Plan met the 72-hour decision timeframe for 81% of requests. Fewer than 4% of requests are approved without human review. Provider satisfaction with the prior authorization experience, as measured by the Plan's annual provider survey, was 2.9 out of 5.
+
+## 1.5 Reason for the Project
+
+The Plan is subject to the federal Interoperability and Prior Authorization requirements issued by the Centers for Medicare & Medicaid Services (CMS-0057-F), including decision timeframes of 72 hours for expedited requests and seven calendar days for standard requests for impacted lines of business, and annual public reporting of prior authorization metrics. The Plan's performance does not consistently meet these requirements. The Plan's Board of Directors has asked management to report measurable improvement by the third quarter of 2027.
+
+# 2. Project Objectives and Success Measures
+
+## 2.1 Objective
+
+The objective of Project Clearpath (the "Project") is to redesign the Plan's prior authorization process from receipt of request to communication of determination, and to implement AI-assisted intake, automated approval of low-risk requests and AI-generated clinical summaries for reviewers, so that the Plan meets its regulatory decision timeframes and materially reduces administrative burden on providers and UM staff.
+
+## 2.2 Success Measures
+
+The parties will measure the Project against the following targets (the "Success Measures"). Baselines are as stated in Section 1.4. Targets apply to the service categories that are live at the time of measurement and will be measured over the four weeks before the Benefits Realization Report described in Section 4.
+
+(a) Median decision time for standard requests reduced from 9.4 calendar days to 5.0 calendar days or less.
+
+(b) Expedited requests decided within 72 hours increased from 81% to 99% or more.
+
+(c) Share of requests received electronically (portal or electronic data interchange) increased from 50% to 75% or more.
+
+(d) Share of requests approved by automated rules without nurse review increased from less than 4% to 25% or more.
+
+(e) Average intake handling time for fax requests reduced from 22 minutes to 6 minutes or less.
+
+(f) Share of requests pended for missing documentation reduced from 42% to 20% or less.
+
+(g) Provider satisfaction with prior authorization increased from 2.9 to 3.8 out of 5 or more, measured by a pulse survey administered by the Client.
+
+The Success Measures are shared goals. IBM's obligation is to perform the Services and provide the Deliverables in accordance with this SOW. Failure to achieve a Success Measure is not, by itself, a breach of this SOW by IBM, because achievement depends on Client decisions, provider behavior, Client staffing and other factors outside IBM's control.
+
+## 2.3 Design Principles
+
+The parties agree that the solution will follow these principles, which may only be changed by the Executive Steering Committee:
+
+(a) No automated denials. Automated rules may approve a request or route it to a human reviewer. Any adverse determination will be made by an appropriately licensed clinician employed or contracted by the Client.
+
+(b) Human in the loop for low confidence. Where the AI intake service extracts data with a confidence score below a threshold set by the Design Authority, the case will be routed to an intake coordinator for verification.
+
+(c) Explainability. Every automated approval and every AI clinical summary will record the criteria, source documents and model version used, so that UM staff, auditors and regulators can trace how it was produced.
+
+# 3. Scope of Services
+
+IBM will provide the following services (the "Services") through five workstreams over six phases. The phases overlap as shown in Section 7.
+
+## 3.1 Workstream 1: Process Discovery and Design
+
+IBM will use IBM Process Studio and process mining on UM Platform event logs to build a current-state model of the prior authorization process, quantify the baseline in Section 1.4, identify bottlenecks and rework loops, and conduct up to 12 discovery workshops with UM, Provider Network Services and Member Services staff. IBM will then design the future-state process, including target roles, decision points and service levels, for up to three service categories: (i) advanced imaging, (ii) durable medical equipment and home health, and (iii) outpatient surgical procedures.
+
+## 3.2 Workstream 2: Intelligent Intake and Clinical Review
+
+IBM will design, build and test: (a) an AI intake service using IBM watsonx that classifies incoming fax and portal documents, extracts member, provider, service and diagnosis information, and creates or updates cases in the UM Platform; (b) a set of automated approval rules (the "Auto-Approval Rules") for low-risk requests within the three service categories, based on clinical policies approved by the Client; (c) an automated check that tells providers at the time of submission whether a service requires prior authorization; and (d) an AI-generated clinical summary that presents relevant information from the submitted records to nurse reviewers alongside the applicable criteria. IBM will configure up to 120 Auto-Approval Rules in total.
+
+## 3.3 Workstream 3: Integration and Data
+
+IBM will design and build integrations between the AI intake service, the Auto-Approval Rules and the UM Platform using the UM Platform's published REST application programming interfaces, and will publish an interface specification that the Client's interoperability vendor (the "Interop Vendor") can use to connect the Client's FHIR prior authorization interface to the solution. IBM will build a prior authorization operations dashboard showing the Success Measures and daily operational metrics.
+
+## 3.4 Workstream 4: Change, Training and Provider Adoption
+
+IBM will perform a change impact assessment for affected UM roles, develop an adoption strategy and communication plan, produce training curricula and reviewer playbooks, deliver train-the-trainer sessions for up to 40 Client super users, and design and support a provider adoption campaign to move submitting providers from fax and telephone to electronic submission.
+
+## 3.5 Workstream 5: Project Management and Governance
+
+IBM will provide an Engagement Manager who will maintain the integrated project plan, risk and issue log and decision log, run the weekly status meeting, prepare materials for the Executive Steering Committee, and administer the change control procedure in Section 10.
+
+## 3.6 Phases
+
+(a) Phase 0, Mobilize (Weeks 1 to 2): onboarding, access requests, confirmation of the integrated plan.
+
+(b) Phase 1, Discover (Weeks 3 to 8): process mining, workshops and baseline validation.
+
+(c) Phase 2, Design (Weeks 7 to 13): future-state process, AI use case design, Auto-Approval Rule logic and solution architecture.
+
+(d) Phase 3, Build and Pilot (Weeks 12 to 25): build, system integration testing, user acceptance testing and a pilot in the advanced imaging service category with the Larkspur Medical Group and up to 25 additional provider groups.
+
+(e) Phase 4, Scale (Weeks 25 to 29): rollout of durable medical equipment and home health (Wave 2) and outpatient surgical procedures (Wave 3).
+
+(f) Phase 5, Hypercare and Handover (Weeks 29 to 32): stabilization support, benefits measurement and handover to Client operations.
+
+"Week 1" begins on the Project Start Date, which is January 11, 2027, provided the conditions in Section 6.1 are met.
+
+# 4. Deliverables
+
+IBM will provide the following deliverables (each a "Deliverable"). Target weeks are subject to Client performance of its responsibilities in Section 6.
+
+**D1. Project Charter and Integrated Plan** (Week 2). Project objectives, governance, roles, integrated plan, risk log and communication plan. Acceptance criteria: approved by the Client Project Manager.
+
+**D2. Current-State Process Model and Baseline Report** (Week 6). Process Studio model of the current prior authorization process based on at least 12 months of UM Platform event logs, with baseline values for each Success Measure, variant analysis and a ranked list of improvement opportunities. Acceptance criteria: baseline values reconcile to Client operational reports within 5%. This Deliverable depends on Client providing the data described in Section 6.2(a).
+
+**D3. Discovery Sign-off** (Week 8). A Steering Committee decision that confirms the baseline, the prioritized opportunities and the three service categories. This is a governance milestone.
+
+**D4. Future-State Process Design** (Week 11). Future-state process models for the three service categories, target operating model, role descriptions and service levels.
+
+**D5. AI Use Case and Auto-Approval Rule Design** (Week 11). Detailed design of the AI intake service, the clinical summary and the logic for each proposed Auto-Approval Rule, including confidence thresholds. Acceptance criteria: each Auto-Approval Rule is approved in writing by the Clinical Policy Owner.
+
+**D6. Solution Architecture and Integration Design** (Week 12). Architecture, security design, data flows, UM Platform interface design and the Interop Vendor interface specification. Acceptance criteria: approved by the Design Authority and by LVH Information Security.
+
+**D7. Change Impact Assessment and Adoption Strategy** (Week 12). Role-by-role impact assessment, adoption strategy, communication plan and provider adoption approach.
+
+**D8. Design Approval** (Week 13). A Design Authority decision that approves D4, D5 and D6 for build. This is a governance milestone.
+
+**D9. Intelligent Intake Service** (Week 19). The AI intake service, configured and deployed to the Client's test environment, with document classification and data extraction for the three service categories.
+
+**D10. Auto-Approval Rules and Prior Authorization Check** (Week 20). Configured Auto-Approval Rules for the advanced imaging service category and the prior authorization requirement check.
+
+**D11. UM Platform Integration** (Week 20). Built and unit-tested integrations between the solution and the UM Platform.
+
+**D12. Training Curriculum and Reviewer Playbooks** (Week 21). Training materials for intake coordinators, nurse reviewers and medical directors, and delivery of train-the-trainer sessions.
+
+**D13. Test Completion Report** (Week 22). Results of system integration testing and user acceptance testing. Acceptance criteria: no open Severity 1 or Severity 2 defects, and UAT signed off by the Client UM Lead.
+
+**D14. Pilot Go/No-Go Decision** (Week 23). A Steering Committee decision to start the pilot. This is a governance milestone.
+
+**D15. Pilot Go-Live: Advanced Imaging** (Week 24). The solution in production for the advanced imaging service category with the pilot provider groups.
+
+**D16. Pilot Results Report and Scale Decision** (Week 26). Pilot performance against the Success Measures, lessons learned and a Steering Committee decision on whether to proceed with Waves 2 and 3.
+
+**D17. Wave 2 Go-Live: DME and Home Health** (Week 27). Production rollout for durable medical equipment and home health, including the Auto-Approval Rules for that category.
+
+**D18. Provider Adoption Campaign** (Week 28). Execution support for the provider adoption campaign, including provider webinars, portal guides and a targeted outreach list of the top 200 fax-submitting providers.
+
+**D19. Wave 3 Go-Live: Outpatient Surgical Procedures** (Week 29). Production rollout for outpatient surgical procedures. Completion of D19 constitutes "Full Go-Live."
+
+**D20. Benefits Realization Report** (Week 31). Measurement of the Success Measures over the preceding four weeks against baseline.
+
+**D21. Operational Handover and Runbooks** (Week 32). Operating runbooks, model monitoring procedures, rule maintenance procedures and knowledge transfer sessions for the Client's UM analytics and Enterprise Applications teams. Acceptance of D21 constitutes "Final Acceptance."
+
+# 5. Out of Scope
+
+The following are not included in the Services. Any of them may be added through the change control procedure in Section 10.
+
+(a) Design, build or operation of the Client's FHIR prior authorization application programming interface, which is provided by the Interop Vendor under a separate agreement with the Client. IBM's role is limited to providing the interface specification in D6 and participating in up to four joint integration testing sessions.
+
+(b) Pharmacy prior authorization, which is administered by the Client's pharmacy benefit manager.
+
+(c) Behavioral health utilization management, which is delegated to a third-party behavioral health organization.
+
+(d) Redesign of the appeals and grievances process.
+
+(e) Authoring, editing or licensing of clinical criteria content. The Client is responsible for maintaining its licenses to clinical criteria content and for any fees charged by the criteria vendor for automated use of that content.
+
+(f) Decisions on provider contracting, gold-carding programs or changes to which services require prior authorization. IBM may model the impact of such decisions at the Client's request.
+
+(g) Software licenses and cloud subscriptions, including IBM watsonx subscriptions, which the Client will purchase under a separate order. The fees in Section 11 do not include software or subscription charges.
+
+(h) Configuration changes or custom development by the vendor of the UM Platform.
+
+(i) End-user training of UM staff beyond the train-the-trainer sessions in D12, and supplemental staffing of intake or clinical review positions.
+
+(j) Service categories other than the three listed in Section 3.1.
+
+# 6. Client Responsibilities
+
+The Client's timely performance of the following responsibilities is essential to IBM's performance. If the Client does not perform a responsibility on time, IBM will notify the Client, and the parties will use the change control procedure in Section 10 to address any resulting effect on schedule, fees or Deliverables.
+
+## 6.1 Conditions for the Project Start Date
+
+Before the Project Start Date, the Client will: (a) execute a Business Associate Agreement with IBM covering the Services; (b) name the Client roles listed in Section 8.2; and (c) issue Client network accounts for the IBM team members named in the integrated plan. If these conditions are not met by January 4, 2027, the Project Start Date will move to the Monday after they are met.
+
+## 6.2 Data, Systems and Environments
+
+(a) Within 10 business days after the Project Start Date, the Client will provide IBM with read-only access to UM Platform event logs and prior authorization case history for at least the 24 months before the Project Start Date, including service codes, diagnosis codes, request channel, status changes and timestamps.
+
+(b) By Week 14, the Client will provide a test environment of the UM Platform with REST API access enabled and with test data that does not contain production protected health information, or that is approved for test use by the Client's Privacy Office.
+
+(c) The Client will complete its security review of the solution architecture within 15 business days after IBM submits D6.
+
+(d) The Client will manage its relationship with the UM Platform vendor and the Interop Vendor, and will ensure their participation in design and testing activities as needed.
+
+## 6.3 People and Decisions
+
+(a) The Client will make the Clinical Policy Owner available for at least 20% of his or her working time during Phases 2 and 3, and will make decisions on clinical policy questions within 5 business days of a request.
+
+(b) The Client will make at least six nurse reviewers and four intake coordinators available as subject matter experts for up to four hours per week each during Phases 1 and 2, and will provide at least 15 UM staff for user acceptance testing during Weeks 21 and 22.
+
+(c) The Client will provide up to 40 super users for train-the-trainer sessions and will deliver end-user training to the remaining UM staff before each go-live.
+
+(d) The Client is responsible for any consultation with employees or their representatives about changes to roles, staffing levels or work assignments arising from the Project.
+
+(e) The Client will administer the provider pulse survey used for Success Measure (g) in Week 3 and Week 30.
+
+## 6.4 Review of Deliverables
+
+The Client will review each Deliverable and either accept it or provide a written description of any nonconformity with its acceptance criteria within 5 business days after IBM submits it.
+
+# 7. Schedule and Milestones
+
+The Project will run for 32 weeks, from January 11, 2027 to August 20, 2027. The key milestones are Discovery Sign-off (Week 8), Design Approval (Week 13), Pilot Go/No-Go (Week 23), Pilot Go-Live (Week 24), Scale Decision (Week 26), Full Go-Live (Week 29) and Final Acceptance (Week 32). Dependencies between Deliverables are as follows: D2 depends on the data in Section 6.2(a); D4 and D5 depend on D2 and D3; D6 depends on D2; D7 depends on D4; D8 depends on D4, D5 and D6; D9, D10 and D11 depend on D8, and D11 also depends on the test environment in Section 6.2(b); D12 depends on D7 and D10; D13 depends on D9, D10 and D11; D14 depends on D12 and D13; D15 depends on D14; D16 depends on D15; D17 and D19 depend on D16; D18 depends on D15; D20 depends on D19; and D21 depends on D20.
+
+Each go-live will be scheduled for a Monday and will be followed by a two-week period during which IBM provides elevated support.
+
+# 8. Project Organization and Governance
+
+## 8.1 IBM Roles
+
+IBM will provide the following key personnel: Kavita Menon, Partner and Engagement Executive; David Lund, Engagement Manager; Ben Ochoa, Process Studio and Process Mining Lead; Sofia Marquez, AI Solution Lead; Arjun Patel, Integration Architect; and Hannah Kim, Change and Adoption Lead. IBM will staff the Project with a team of approximately 14 people at peak, including onshore and offshore resources. IBM will not reassign the Engagement Manager or the AI Solution Lead during Phases 2 and 3 without the Client's consent, which will not be unreasonably withheld, except for reasons outside IBM's reasonable control.
+
+## 8.2 Client Roles
+
+The Client will provide the following roles: Executive Sponsor, Dr. Renata Okafor, Chief Medical Officer of the Plan; Client Project Manager, Marcus Hale, Director of UM Operations; Clinical Policy Owner, Dr. Priya Raman, Medical Director, Utilization Management; IT Lead, Elena Sorvino, Vice President, Enterprise Applications; Provider Adoption Lead, Tom Brandt, Director of Provider Network Services; Compliance Advisor, Janelle Price, Plan Compliance Officer; and Client UM Lead for UAT, to be named by the Client Project Manager by Week 18.
+
+## 8.3 Governance Forums
+
+(a) Executive Steering Committee. Meets monthly and at each governance milestone. Chaired by the Executive Sponsor; members include the Plan President, the IBM Partner, the Engagement Manager, the Client Project Manager and the IT Lead. Approves governance milestones, changes to Design Principles, and change requests above $100,000 or affecting a go-live date.
+
+(b) Design Authority. Meets every two weeks during Phases 2 and 3. Co-chaired by the Clinical Policy Owner and IBM's AI Solution Lead; includes the IT Lead, Integration Architect, Compliance Advisor and Information Security. Approves architecture, rule logic, confidence thresholds and model changes.
+
+(c) Weekly Status Meeting. Chaired by the Engagement Manager and the Client Project Manager. Reviews progress, risks, issues, decisions and upcoming Client responsibilities.
+
+(d) Workstream Stand-ups. Held at least three times per week by each workstream lead.
+
+## 8.4 Escalation
+
+Issues that cannot be resolved by workstream leads within 2 business days will be escalated to the Engagement Manager and the Client Project Manager. Issues they cannot resolve within 3 business days will be escalated to the Executive Steering Committee, which will meet within 5 business days if a regular meeting is not scheduled. Issues the Executive Steering Committee cannot resolve will be handled under the dispute resolution provisions of the Agreement.
+
+# 9. Assumptions
+
+IBM's estimate of fees and schedule is based on the following assumptions. If an assumption proves incorrect, either party may request a change under Section 10.
+
+(a) Pilot volume will not exceed 4,500 prior authorization requests per week.
+
+(b) The UM Platform's existing REST APIs support creating, updating and retrieving cases and attachments without custom development by the UM Platform vendor.
+
+(c) At least 85% of historical prior authorization records contain structured service codes and diagnosis codes.
+
+(d) The rollout will consist of the pilot and up to two additional waves.
+
+(e) IBM watsonx will be deployed in a Client-approved IBM Cloud region, and the Client's subscription will be active by Week 10.
+
+(f) Submitted documents and Deliverables will be in English.
+
+(g) IBM will perform the Services primarily remotely, with up to 30% of team time on-site at the Riverbend Campus during workshops, testing and go-lives.
+
+(h) The Client's licensed clinical criteria content may be used by automated rules under the Client's existing license.
+
+(i) There will be no more than two rounds of review for each document Deliverable.
+
+# 10. Change Control
+
+Either party may request a change to this SOW by submitting a Project Change Request ("PCR") to the Engagement Manager and the Client Project Manager. IBM will provide a written impact assessment, describing the effect on scope, schedule, fees and risk, within 5 business days. Time spent preparing impact assessments of more than 8 hours for a single PCR will be billed at the rates in Section 11.3 if the Client approves the assessment work in advance. The Client will approve or reject the PCR within 5 business days after receiving the assessment. Until a PCR is signed by both parties, IBM will continue to perform under the existing terms of this SOW. PCRs above $100,000 or that change a go-live date require approval by the Executive Steering Committee.
+
+# 11. Fees and Payment
+
+## 11.1 Fixed Fee
+
+The Services in this SOW will be provided for a fixed fee of $4,860,000 (the "Fixed Fee"), payable on achievement of the following payment milestones:
+
+(a) Acceptance of D1, Project Charter and Integrated Plan: $486,000 (10%).
+
+(b) Completion of D3, Discovery Sign-off: $729,000 (15%).
+
+(c) Completion of D8, Design Approval: $972,000 (20%).
+
+(d) Completion of D14, Pilot Go/No-Go Decision: $972,000 (20%).
+
+(e) Completion of D19, Full Go-Live: $972,000 (20%).
+
+(f) Final Acceptance (acceptance of D21): $729,000 (15%).
+
+## 11.2 Expenses
+
+The Client will reimburse IBM for reasonable travel and living expenses incurred in accordance with the Client's travel policy, billed monthly at actual cost. Expenses will not exceed 7% of the Fixed Fee ($340,200) without the Client's prior written approval.
+
+## 11.3 Optional Hypercare Extension
+
+At the Client's option, exercised in writing by Week 30, IBM will provide up to eight additional weeks of hypercare support on a time and materials basis at a blended rate of $210 per hour, not to exceed $420,000.
+
+## 11.4 Invoicing
+
+IBM will invoice each payment milestone upon its achievement. Invoices are due within 45 days of the invoice date. Disputed amounts must be identified in writing within 15 days of the invoice date.
+
+# 12. Acceptance
+
+IBM will submit each Deliverable to the Client Project Manager with a notice of completion. Within the review period in Section 6.4, the Client will either accept the Deliverable or describe in writing how it does not meet its acceptance criteria. IBM will correct any nonconformity and resubmit the Deliverable, and the review period will restart. A Deliverable will be deemed accepted if the Client does not provide a written description of nonconformity within the review period, or if the Client uses the Deliverable in production. Governance milestones (D3, D8, D14 and D16) are completed when the relevant forum records its decision, or, if the forum does not meet within 5 business days of IBM's request, when IBM has satisfied the entry criteria documented in D1.
+
+# 13. Term
+
+This SOW begins on the SOW Date and ends on Final Acceptance or August 31, 2027, whichever comes first, unless extended by a PCR or by the Client's exercise of the option in Section 11.3.
+
+# 14. Signatures
+
+Larkspur Valley Health, Inc.
+Name: ______________________ Title: ______________________ Date: __________
+
+International Business Machines Corporation
+Name: ______________________ Title: ______________________ Date: __________

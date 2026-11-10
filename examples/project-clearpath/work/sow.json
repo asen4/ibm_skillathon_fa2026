@@ -1,0 +1,4130 @@
+{
+ "meta": {
+  "project": "Project Clearpath",
+  "sow_number": "SOW No. LVH-2026-014",
+  "title": "Prior Authorization Modernization",
+  "client": "Larkspur Valley Health, Inc.",
+  "client_short": "LVH",
+  "unit_short": "the Plan",
+  "vendor": "IBM",
+  "industry": "Integrated health system and health plan",
+  "sow_date": "2026-11-23",
+  "start_date": "2027-01-11",
+  "end_date": "2027-08-20",
+  "term_end": "2027-08-31",
+  "weeks": 32,
+  "headline": "Cut prior authorization decisions from 9.4 days to 5, and get the Plan inside federal timeframes, in 32 weeks.",
+  "summary": "IBM redesigns how Larkspur Health Plan handles prior authorization, from the moment a request arrives to the moment the provider hears back. AI reads incoming faxes and portal documents, low-risk requests in three service categories are approved by rules, and nurses get an AI clinical summary. No request is ever denied by a machine.",
+  "fictional": true,
+  "as_of_week": 9
+ },
+ "deal": [
+  {
+   "label": "Starts",
+   "value": "Jan 11, 2027",
+   "note": "moves if start conditions slip",
+   "src": [
+    "s3_6start",
+    "s6_1"
+   ]
+  },
+  {
+   "label": "Pilot live",
+   "value": "Week 24",
+   "note": "advanced imaging",
+   "src": [
+    "s4_d15"
+   ]
+  },
+  {
+   "label": "Full go-live",
+   "value": "Week 29",
+   "note": "all three categories",
+   "src": [
+    "s4_d19"
+   ]
+  },
+  {
+   "label": "Finishes",
+   "value": "Aug 20, 2027",
+   "note": "term ends Aug 31",
+   "src": [
+    "s7_run",
+    "s13"
+   ]
+  },
+  {
+   "label": "Fixed fee",
+   "value": "$4.86M",
+   "note": "plus expenses, 7% cap unless approved",
+   "src": [
+    "s11_1",
+    "s11_2"
+   ]
+  },
+  {
+   "label": "IBM team",
+   "value": "~14 at peak",
+   "note": "onshore and offshore",
+   "src": [
+    "s8_1team"
+   ]
+  }
+ ],
+ "why": [
+  {
+   "label": "Strategy",
+   "text": "The Plan's 2026 to 2028 strategy, Simpler Care, Sooner, puts less provider burden and faster access to care first.",
+   "src": [
+    "s1_2strat"
+   ]
+  },
+  {
+   "label": "Problem",
+   "text": "410,000 requests a year, half of them on fax or phone, a 9.4 day median wait, and only 81% of urgent requests decided in 72 hours.",
+   "src": [
+    "s1_4vol",
+    "s1_4time"
+   ]
+  },
+  {
+   "label": "Pressure",
+   "text": "Federal rules (CMS-0057-F) require 72 hour and 7 day decisions and public reporting. The Board wants measurable improvement by Q3 2027.",
+   "src": [
+    "s1_5cms",
+    "s1_5board"
+   ]
+  },
+  {
+   "label": "Answer",
+   "text": "Redesign the process end to end and add AI intake, rule-based approval of low-risk requests and AI clinical summaries.",
+   "src": [
+    "s2_1"
+   ]
+  }
+ ],
+ "measures": [
+  {
+   "id": "M1",
+   "label": "Median decision time, standard requests",
+   "baseline": 9.4,
+   "target": 5.0,
+   "unit": " days",
+   "better": "down",
+   "min": 0,
+   "max": 10,
+   "format": "days",
+   "src": [
+    "s2_2a"
+   ]
+  },
+  {
+   "id": "M2",
+   "label": "Expedited requests decided within 72 hours",
+   "baseline": 81,
+   "target": 99,
+   "unit": "%",
+   "better": "up",
+   "min": 50,
+   "max": 100,
+   "format": "pct",
+   "src": [
+    "s2_2b"
+   ]
+  },
+  {
+   "id": "M3",
+   "label": "Requests received electronically",
+   "baseline": 50,
+   "target": 75,
+   "unit": "%",
+   "better": "up",
+   "min": 0,
+   "max": 100,
+   "format": "pct",
+   "src": [
+    "s2_2c"
+   ]
+  },
+  {
+   "id": "M4",
+   "label": "Approved by rules without nurse review",
+   "baseline": 4,
+   "target": 25,
+   "unit": "%",
+   "better": "up",
+   "min": 0,
+   "max": 100,
+   "format": "pct",
+   "note": "baseline is under 4%",
+   "src": [
+    "s2_2d"
+   ],
+   "baseline_label": "<4%"
+  },
+  {
+   "id": "M5",
+   "label": "Intake handling time per fax request",
+   "baseline": 22,
+   "target": 6,
+   "unit": " min",
+   "better": "down",
+   "min": 0,
+   "max": 25,
+   "format": "min",
+   "src": [
+    "s2_2e"
+   ]
+  },
+  {
+   "id": "M6",
+   "label": "Requests pended for missing documents",
+   "baseline": 42,
+   "target": 20,
+   "unit": "%",
+   "better": "down",
+   "min": 0,
+   "max": 100,
+   "format": "pct",
+   "src": [
+    "s2_2f"
+   ]
+  },
+  {
+   "id": "M7",
+   "label": "Provider satisfaction with prior auth",
+   "baseline": 2.9,
+   "target": 3.8,
+   "unit": " / 5",
+   "better": "up",
+   "min": 1,
+   "max": 5,
+   "format": "score",
+   "src": [
+    "s2_2g"
+   ]
+  }
+ ],
+ "measures_note": {
+  "text": "These are shared goals, not IBM guarantees, and missing one is not by itself a breach. They are measured only for the service categories live at the time, over the four weeks before the Benefits Realization Report.",
+  "src": [
+   "s2_2shared",
+   "s2_2window"
+  ]
+ },
+ "principles": [
+  {
+   "title": "No automated denials",
+   "text": "Rules can approve or route to a person. Only a licensed clinician can say no.",
+   "src": [
+    "s2_3a"
+   ]
+  },
+  {
+   "title": "A person checks low-confidence reads",
+   "text": "If the AI is unsure what it extracted, an intake coordinator verifies it. The Design Authority sets the threshold.",
+   "src": [
+    "s2_3b"
+   ]
+  },
+  {
+   "title": "Every decision is traceable",
+   "text": "Each automated approval and AI summary records the criteria, documents and model version behind it.",
+   "src": [
+    "s2_3c"
+   ]
+  }
+ ],
+ "watchouts": [
+  {
+   "lens": "ibm",
+   "title": "The targets are shared, not promised",
+   "text": "The SOW says missing a Success Measure is not by itself a breach. Keep that framing in every status report so the measures do not quietly become guarantees.",
+   "src": [
+    "s2_2shared"
+   ],
+   "go": "brief:measures"
+  },
+  {
+   "lens": "ibm",
+   "title": "Four assumptions carry the price",
+   "text": "Pilot volume under 4,500 a week, no UM Platform vendor development, 85% structured codes, and criteria licenses that allow automation. Check each one early and raise a PCR the day one fails.",
+   "src": [
+    "s9a",
+    "s9b",
+    "s9c",
+    "s9h"
+   ],
+   "go": "scope:assumptions"
+  },
+  {
+   "lens": "ibm",
+   "title": "Gates protect the cash",
+   "text": "If a forum does not meet within 5 business days of IBM's request, a governance milestone completes when IBM meets the entry criteria in D1. Write those criteria carefully in Week 2.",
+   "src": [
+    "s12gov"
+   ],
+   "go": "money"
+  },
+  {
+   "lens": "ibm",
+   "title": "Only about a week of room at the end",
+   "text": "Final Acceptance is planned for Aug 20 and the term ends Aug 31. Any slip after Full Go-Live needs a PCR or the hypercare option to stay inside the term.",
+   "src": [
+    "s7_run",
+    "s13"
+   ],
+   "go": "route:D21"
+  },
+  {
+   "lens": "client",
+   "title": "Data access is due in Week 3",
+   "text": "Read-only access to 24 months of UM Platform event logs within 10 business days of the start. The baseline, and everything after it, waits on this.",
+   "src": [
+    "s6_2a"
+   ],
+   "go": "route:CD1"
+  },
+  {
+   "lens": "client",
+   "title": "Dr. Raman is on the critical path",
+   "text": "The Clinical Policy Owner signs every Auto-Approval Rule in writing and owes clinical decisions within 5 business days, at 20% of her time through Phases 2 and 3.",
+   "src": [
+    "s6_3a",
+    "s4_d5"
+   ],
+   "go": "route:CD4"
+  },
+  {
+   "lens": "client",
+   "title": "Software is bought separately",
+   "text": "watsonx subscriptions, UM Platform vendor work, the FHIR API and end-user training are not in the fee. The watsonx subscription needs to be active by Week 10.",
+   "src": [
+    "s5g",
+    "s5a",
+    "s5h",
+    "s9e"
+   ],
+   "go": "scope"
+  },
+  {
+   "lens": "client",
+   "title": "Silence counts as acceptance",
+   "text": "Each deliverable has a 5 business day review window. No written objection in that window, or using it in production, means it is accepted.",
+   "src": [
+    "s6_4",
+    "s12deemed"
+   ],
+   "go": "owes"
+  }
+ ],
+ "findings": [
+  {
+   "id": "F1",
+   "severity": "high",
+   "title": "Security review can outlast Design Approval",
+   "text": "Information Security has 15 business days to review the architecture (D6, Week 12), which runs to Week 15. But Design Approval (D8) in Week 13 needs D6 approved by Information Security. If the client uses the full window, the build starts two weeks late and Final Acceptance slips past the end of the term. It also sits oddly next to the 5 business day review every other deliverable gets.",
+   "ask": "Agree in Week 2 that LVH Information Security will finish its review by Week 13, or move D8.",
+   "src": [
+    "s6_2c",
+    "s4_d6",
+    "s4_d8",
+    "s6_4"
+   ],
+   "go": "route:CD3"
+  },
+  {
+   "id": "F2",
+   "severity": "medium",
+   "title": "Two forums claim Design Approval",
+   "text": "Section 4 says Design Approval (D8) is a Design Authority decision. Section 8.3(a) says the Executive Steering Committee approves governance milestones. Since D8 releases a $972,000 payment, decide which forum signs it.",
+   "ask": "Name the approving forum for D8 in the Project Charter (D1).",
+   "src": [
+    "s4_d8",
+    "s8_3a"
+   ],
+   "go": "people"
+  },
+  {
+   "id": "F3",
+   "severity": "medium",
+   "title": "Wave 3 barely makes the benefits window",
+   "text": "Success Measures are taken over the four weeks before the Benefits Realization Report (Weeks 27 to 30). Outpatient surgery goes live in Week 29, so it contributes two weeks of data, both in elevated support.",
+   "ask": "Agree how Wave 3 results will be read, or measure it separately during hypercare.",
+   "src": [
+    "s2_2window",
+    "s4_d19",
+    "s7_monday"
+   ],
+   "go": "route:D20"
+  },
+  {
+   "id": "F4",
+   "severity": "medium",
+   "title": "\"By the third quarter\" can be read two ways",
+   "text": "The Board wants measurable improvement \"by the third quarter of 2027\". If that means by July 1, the Benefits Realization Report (Week 31, Aug 13) arrives too late and the pilot results (Week 26, Jul 9) are the first hard numbers. If it means by Sep 30, the plan has about seven weeks to spare.",
+   "ask": "Confirm with the Executive Sponsor which date the Board expects, and what it will see.",
+   "src": [
+    "s1_5board",
+    "s4_d16",
+    "s4_d20"
+   ],
+   "go": "route:D16"
+  }
+ ],
+ "workstreams": [
+  {
+   "id": "WS1",
+   "name": "Process Discovery and Design",
+   "short": "Process",
+   "color": "#8a3ffc",
+   "summary": "Process Studio and process mining on UM Platform event logs, up to 12 workshops, future-state design for three service categories.",
+   "src": [
+    "s3_1"
+   ]
+  },
+  {
+   "id": "WS2",
+   "name": "Intelligent Intake and Clinical Review",
+   "short": "AI and rules",
+   "color": "#0f62fe",
+   "summary": "watsonx intake, up to 120 Auto-Approval Rules, a prior auth requirement check, and AI clinical summaries for nurses.",
+   "src": [
+    "s3_2"
+   ]
+  },
+  {
+   "id": "WS3",
+   "name": "Integration and Data",
+   "short": "Integration",
+   "color": "#007d79",
+   "summary": "Integrations to the UM Platform REST APIs, an interface spec for the Interop Vendor's FHIR API, and an operations dashboard.",
+   "src": [
+    "s3_3"
+   ]
+  },
+  {
+   "id": "WS4",
+   "name": "Change, Training and Provider Adoption",
+   "short": "Change",
+   "color": "#d02670",
+   "summary": "Change impact, training for up to 40 super users, and a campaign to move providers off fax and phone.",
+   "src": [
+    "s3_4"
+   ]
+  },
+  {
+   "id": "WS5",
+   "name": "Project Management and Governance",
+   "short": "PMO",
+   "color": "#525252",
+   "summary": "Integrated plan, risk, issue and decision logs, weekly status, Steering Committee materials and change control.",
+   "src": [
+    "s3_5"
+   ]
+  }
+ ],
+ "phases": [
+  {
+   "id": "P0",
+   "name": "Mobilize",
+   "start": 1,
+   "end": 2,
+   "summary": "Onboarding, access requests, confirm the plan.",
+   "src": [
+    "s3_6a"
+   ]
+  },
+  {
+   "id": "P1",
+   "name": "Discover",
+   "start": 3,
+   "end": 8,
+   "summary": "Process mining, workshops, baseline validation.",
+   "src": [
+    "s3_6b"
+   ]
+  },
+  {
+   "id": "P2",
+   "name": "Design",
+   "start": 7,
+   "end": 13,
+   "summary": "Future-state process, AI use cases, rule logic, architecture.",
+   "src": [
+    "s3_6c"
+   ]
+  },
+  {
+   "id": "P3",
+   "name": "Build and Pilot",
+   "start": 12,
+   "end": 25,
+   "summary": "Build, SIT, UAT and the advanced imaging pilot.",
+   "src": [
+    "s3_6d"
+   ]
+  },
+  {
+   "id": "P4",
+   "name": "Scale",
+   "start": 25,
+   "end": 29,
+   "summary": "Wave 2 (DME and home health) and Wave 3 (outpatient surgery).",
+   "src": [
+    "s3_6e"
+   ]
+  },
+  {
+   "id": "P5",
+   "name": "Hypercare and Handover",
+   "start": 29,
+   "end": 32,
+   "summary": "Stabilize, measure benefits, hand over.",
+   "src": [
+    "s3_6f"
+   ]
+  }
+ ],
+ "deliverables": [
+  {
+   "id": "D1",
+   "name": "Project Charter and Integrated Plan",
+   "short": "Charter",
+   "ws": "WS5",
+   "week": 2,
+   "type": "document",
+   "depends": [],
+   "needs": [
+    "CD0"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "Approved by the Client Project Manager.",
+   "summary": "Objectives, governance, roles, plan, risk log and communication plan. Also sets the entry criteria for every gate.",
+   "src": [
+    "s4_d1"
+   ]
+  },
+  {
+   "id": "D2",
+   "name": "Current-State Process Model and Baseline Report",
+   "short": "Baseline",
+   "ws": "WS1",
+   "week": 6,
+   "type": "document",
+   "depends": [],
+   "needs": [
+    "CD1",
+    "CD2"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "Baseline values reconcile to LVH operational reports within 5%.",
+   "summary": "A Process Studio model built from at least 12 months of event logs, with baselines, variants and ranked opportunities.",
+   "recovery": [
+    "Start mining on a 12 month extract while the full 24 months are prepared",
+    "Use operational reports for an interim baseline and reconcile later",
+    "Run discovery workshops early so the calendar is not idle"
+   ],
+   "src": [
+    "s4_d2"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D3",
+   "name": "Discovery Sign-off",
+   "short": "Discovery sign-off",
+   "ws": "WS5",
+   "week": 8,
+   "type": "gate",
+   "depends": [
+    "D2"
+   ],
+   "needs": [],
+   "dep_origin": "inferred",
+   "milestone": "Discovery Sign-off",
+   "acceptance": "Governance milestone. Complete when the Steering Committee records its decision.",
+   "summary": "The Steering Committee confirms the baseline, the priorities and the three service categories.",
+   "src": [
+    "s4_d3",
+    "s12gov"
+   ]
+  },
+  {
+   "id": "D4",
+   "name": "Future-State Process Design",
+   "short": "Future process",
+   "ws": "WS1",
+   "week": 11,
+   "type": "document",
+   "depends": [
+    "D2",
+    "D3"
+   ],
+   "needs": [
+    "CD2"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Future-state models for the three categories, operating model, role descriptions and service levels.",
+   "src": [
+    "s4_d4"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D5",
+   "name": "AI Use Case and Auto-Approval Rule Design",
+   "short": "Rule design",
+   "ws": "WS2",
+   "week": 11,
+   "type": "document",
+   "depends": [
+    "D2",
+    "D3"
+   ],
+   "needs": [
+    "CD4"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "Each Auto-Approval Rule approved in writing by the Clinical Policy Owner.",
+   "summary": "Design of the AI intake, the clinical summary and every proposed rule, including confidence thresholds.",
+   "recovery": [
+    "Approve rules in batches by category so imaging is not held up by the others",
+    "Book a standing weekly rule review with Dr. Raman",
+    "Have UM analysts pre-check each rule so sign-off takes minutes, not hours"
+   ],
+   "src": [
+    "s4_d5"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D6",
+   "name": "Solution Architecture and Integration Design",
+   "short": "Architecture",
+   "ws": "WS3",
+   "week": 12,
+   "type": "document",
+   "depends": [
+    "D2"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "acceptance": "Approved by the Design Authority and LVH Information Security.",
+   "summary": "Architecture, security design, data flows, UM Platform interfaces and the Interop Vendor spec.",
+   "src": [
+    "s4_d6"
+   ]
+  },
+  {
+   "id": "D7",
+   "name": "Change Impact Assessment and Adoption Strategy",
+   "short": "Change impact",
+   "ws": "WS4",
+   "week": 12,
+   "type": "document",
+   "depends": [
+    "D4"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Role-by-role impact, adoption strategy, communication plan and provider adoption approach.",
+   "src": [
+    "s4_d7"
+   ]
+  },
+  {
+   "id": "D8",
+   "name": "Design Approval",
+   "short": "Design approval",
+   "ws": "WS5",
+   "week": 13,
+   "type": "gate",
+   "depends": [
+    "D4",
+    "D5",
+    "D6"
+   ],
+   "needs": [
+    "CD3"
+   ],
+   "dep_origin": "sow",
+   "milestone": "Design Approval",
+   "acceptance": "Governance milestone. Complete when the Design Authority records its decision.",
+   "summary": "The Design Authority approves the process, rule and architecture designs for build.",
+   "recovery": [
+    "Approve the imaging design first and let the other two categories follow",
+    "Start build on components the security review does not touch",
+    "Hold a joint IBM and Information Security review session in Week 12"
+   ],
+   "src": [
+    "s4_d8"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D9",
+   "name": "Intelligent Intake Service",
+   "short": "AI intake",
+   "ws": "WS2",
+   "week": 19,
+   "type": "build",
+   "depends": [
+    "D8"
+   ],
+   "needs": [
+    "CD5"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "The watsonx intake service in the test environment, classifying and extracting for all three categories.",
+   "src": [
+    "s4_d9",
+    "s7_deps"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D10",
+   "name": "Auto-Approval Rules and Prior Authorization Check",
+   "short": "Rules + PA check",
+   "ws": "WS2",
+   "week": 20,
+   "type": "build",
+   "depends": [
+    "D8"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Configured rules for advanced imaging and the 'is prior auth required?' check.",
+   "src": [
+    "s4_d10",
+    "s7_deps"
+   ]
+  },
+  {
+   "id": "D11",
+   "name": "UM Platform Integration",
+   "short": "UM integration",
+   "ws": "WS3",
+   "week": 20,
+   "type": "build",
+   "depends": [
+    "D8"
+   ],
+   "needs": [
+    "CD6"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Built and unit-tested integrations between the solution and the UM Platform.",
+   "recovery": [
+    "Build against API mocks until the environment is ready",
+    "Ask the UM Platform vendor for a sandbox tenant",
+    "Compress SIT by running integration and functional tests in parallel"
+   ],
+   "src": [
+    "s4_d11",
+    "s7_deps"
+   ]
+  },
+  {
+   "id": "D12",
+   "name": "Training Curriculum and Reviewer Playbooks",
+   "short": "Training",
+   "ws": "WS4",
+   "week": 21,
+   "type": "document",
+   "depends": [
+    "D7",
+    "D10"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Materials for coordinators, nurses and medical directors, and train-the-trainer for up to 40 super users.",
+   "src": [
+    "s4_d12"
+   ]
+  },
+  {
+   "id": "D13",
+   "name": "Test Completion Report",
+   "short": "Testing done",
+   "ws": "WS3",
+   "week": 22,
+   "type": "document",
+   "depends": [
+    "D9",
+    "D10",
+    "D11"
+   ],
+   "needs": [
+    "CD7",
+    "CD8"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "No open Severity 1 or 2 defects, and UAT signed off by the Client UM Lead.",
+   "summary": "Results of system integration and user acceptance testing.",
+   "recovery": [
+    "Run UAT in two shifts to cover a short staff week",
+    "Agree a defect triage rule so Severity 3 items do not block sign-off",
+    "Name the Client UM Lead early so they shadow SIT"
+   ],
+   "src": [
+    "s4_d13"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D14",
+   "name": "Pilot Go/No-Go Decision",
+   "short": "Go / no-go",
+   "ws": "WS5",
+   "week": 23,
+   "type": "gate",
+   "depends": [
+    "D12",
+    "D13"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "milestone": "Pilot Go/No-Go",
+   "acceptance": "Governance milestone. Complete when the Steering Committee records its decision.",
+   "summary": "The Steering Committee decides whether the pilot starts.",
+   "src": [
+    "s4_d14"
+   ]
+  },
+  {
+   "id": "D15",
+   "name": "Pilot Go-Live: Advanced Imaging",
+   "short": "Pilot live",
+   "ws": "WS2",
+   "week": 24,
+   "type": "golive",
+   "depends": [
+    "D14"
+   ],
+   "needs": [
+    "CD9"
+   ],
+   "dep_origin": "sow",
+   "milestone": "Pilot Go-Live",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Advanced imaging in production with Larkspur Medical Group and up to 25 more provider groups.",
+   "src": [
+    "s4_d15",
+    "s3_6d"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D16",
+   "name": "Pilot Results Report and Scale Decision",
+   "short": "Scale decision",
+   "ws": "WS5",
+   "week": 26,
+   "type": "gate",
+   "depends": [
+    "D15"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "milestone": "Scale Decision",
+   "acceptance": "Governance milestone. Complete when the Steering Committee records its decision.",
+   "summary": "Pilot results against the Success Measures and a decision on Waves 2 and 3.",
+   "src": [
+    "s4_d16"
+   ]
+  },
+  {
+   "id": "D17",
+   "name": "Wave 2 Go-Live: DME and Home Health",
+   "short": "Wave 2 live",
+   "ws": "WS2",
+   "week": 27,
+   "type": "golive",
+   "depends": [
+    "D16"
+   ],
+   "needs": [
+    "CD9"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Durable medical equipment and home health in production, with their rules.",
+   "src": [
+    "s4_d17"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D18",
+   "name": "Provider Adoption Campaign",
+   "short": "Provider campaign",
+   "ws": "WS4",
+   "week": 28,
+   "type": "document",
+   "depends": [
+    "D15"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "Webinars, portal guides and outreach to the 200 providers who fax the most.",
+   "src": [
+    "s4_d18"
+   ]
+  },
+  {
+   "id": "D19",
+   "name": "Wave 3 Go-Live: Outpatient Surgical Procedures",
+   "short": "Wave 3 live",
+   "ws": "WS2",
+   "week": 29,
+   "type": "golive",
+   "depends": [
+    "D16"
+   ],
+   "needs": [
+    "CD9"
+   ],
+   "dep_origin": "sow",
+   "milestone": "Full Go-Live",
+   "acceptance": "General acceptance terms (Section 12). Completion is Full Go-Live.",
+   "summary": "Outpatient surgery in production. This is Full Go-Live.",
+   "src": [
+    "s4_d19"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D20",
+   "name": "Benefits Realization Report",
+   "short": "Benefits report",
+   "ws": "WS1",
+   "week": 31,
+   "type": "document",
+   "depends": [
+    "D19"
+   ],
+   "needs": [
+    "CD10"
+   ],
+   "dep_origin": "sow",
+   "acceptance": "General acceptance terms (Section 12).",
+   "summary": "The Success Measures over the previous four weeks, against baseline.",
+   "src": [
+    "s4_d20"
+   ],
+   "needs_origin": "inferred"
+  },
+  {
+   "id": "D21",
+   "name": "Operational Handover and Runbooks",
+   "short": "Handover",
+   "ws": "WS5",
+   "week": 32,
+   "type": "document",
+   "depends": [
+    "D20"
+   ],
+   "needs": [],
+   "dep_origin": "sow",
+   "milestone": "Final Acceptance",
+   "acceptance": "Acceptance of D21 is Final Acceptance.",
+   "summary": "Runbooks, model monitoring and rule maintenance procedures, and knowledge transfer to LVH teams.",
+   "recovery": [
+    "Exercise the hypercare option by Week 30",
+    "Raise a PCR to extend the term past Aug 31",
+    "Run knowledge transfer alongside hypercare instead of after it"
+   ],
+   "src": [
+    "s4_d21"
+   ]
+  }
+ ],
+ "client_deps": [
+  {
+   "id": "CD0",
+   "label": "Start conditions met",
+   "week": 0,
+   "detail": "Business Associate Agreement signed, client roles named, network accounts issued, all by Jan 4, 2027.",
+   "feeds": [
+    "D1"
+   ],
+   "slack": 0,
+   "shifts_all": true,
+   "recovery": [
+    "Run BAA review in parallel with SOW signature",
+    "Pre-stage account requests in December"
+   ],
+   "src": [
+    "s6_1"
+   ],
+   "short": "Start conditions"
+  },
+  {
+   "id": "CD1",
+   "label": "Event log data access",
+   "week": 3,
+   "detail": "Read-only access to 24 months of UM Platform event logs and case history within 10 business days of the start.",
+   "feeds": [
+    "D2"
+   ],
+   "slack": 0,
+   "recovery": [
+    "Accept a 12 month extract first",
+    "IBM writes the extract query for LVH IT to run"
+   ],
+   "src": [
+    "s6_2a"
+   ],
+   "short": "Event log access"
+  },
+  {
+   "id": "CD2",
+   "label": "SMEs for discovery",
+   "week": 3,
+   "detail": "Six nurse reviewers and four intake coordinators, up to four hours a week each, through Phases 1 and 2.",
+   "feeds": [
+    "D2",
+    "D4"
+   ],
+   "slack": 1,
+   "recovery": [
+    "Record shadowing sessions to reuse",
+    "Shift workshops to protected time blocks"
+   ],
+   "src": [
+    "s6_3b"
+   ],
+   "short": "Discovery SMEs"
+  },
+  {
+   "id": "CD3",
+   "label": "Security review of architecture",
+   "week": 13,
+   "detail": "LVH may take up to 15 business days after D6 (Week 12), so up to Week 15. The plan needs it by Week 13.",
+   "feeds": [
+    "D8"
+   ],
+   "slack": 0,
+   "recovery": [
+    "Early security walkthrough in Week 10",
+    "Split approval: imaging components first"
+   ],
+   "src": [
+    "s6_2c"
+   ],
+   "short": "Security review"
+  },
+  {
+   "id": "CD4",
+   "label": "Clinical policy decisions and rule sign-off",
+   "week": 11,
+   "detail": "Dr. Raman at 20% of her time in Phases 2 and 3, decisions within 5 business days, written approval of each rule.",
+   "feeds": [
+    "D5"
+   ],
+   "slack": 0,
+   "recovery": [
+    "Batch rule approvals weekly",
+    "Prepare a one-page packet per rule so each sign-off is quick"
+   ],
+   "src": [
+    "s6_3a"
+   ],
+   "short": "Rule sign-off"
+  },
+  {
+   "id": "CD5",
+   "label": "watsonx subscription active",
+   "week": 10,
+   "detail": "Bought by LVH under a separate order and active by Week 10.",
+   "feeds": [
+    "D9"
+   ],
+   "slack": 3,
+   "recovery": [
+    "Use an IBM sandbox for early model work",
+    "Start procurement during Phase 1"
+   ],
+   "src": [
+    "s9e"
+   ],
+   "short": "watsonx active"
+  },
+  {
+   "id": "CD6",
+   "label": "UM Platform test environment",
+   "week": 14,
+   "detail": "REST APIs enabled and test data free of production PHI, or approved by the Privacy Office.",
+   "feeds": [
+    "D11"
+   ],
+   "slack": 1,
+   "recovery": [
+    "Build against API mocks",
+    "Ask the vendor for a sandbox tenant"
+   ],
+   "src": [
+    "s6_2b"
+   ],
+   "short": "Test environment"
+  },
+  {
+   "id": "CD7",
+   "label": "Client UM Lead named",
+   "week": 18,
+   "detail": "Named by the Client Project Manager by Week 18. Signs off UAT.",
+   "feeds": [
+    "D13"
+   ],
+   "slack": 3,
+   "recovery": [
+    "Name an interim lead at Design Approval"
+   ],
+   "src": [
+    "s8_2uat"
+   ],
+   "short": "UAT lead named"
+  },
+  {
+   "id": "CD8",
+   "label": "UAT testers",
+   "week": 21,
+   "detail": "At least 15 UM staff for user acceptance testing in Weeks 21 and 22.",
+   "feeds": [
+    "D13"
+   ],
+   "slack": 0,
+   "recovery": [
+    "Run UAT in shifts",
+    "Back-fill intake with temporary staff"
+   ],
+   "src": [
+    "s6_3b"
+   ],
+   "short": "UAT testers"
+  },
+  {
+   "id": "CD9",
+   "label": "End-user training delivered",
+   "week": 23,
+   "detail": "LVH trains the remaining UM staff before each go-live.",
+   "feeds": [
+    "D15",
+    "D17",
+    "D19"
+   ],
+   "slack": 0,
+   "recovery": [
+    "Go live with trained super users only",
+    "Short e-learning for late joiners"
+   ],
+   "src": [
+    "s6_3c"
+   ],
+   "short": "End-user training"
+  },
+  {
+   "id": "CD10",
+   "label": "Provider pulse survey",
+   "week": 30,
+   "detail": "LVH runs the survey in Week 3 and Week 30.",
+   "feeds": [
+    "D20"
+   ],
+   "slack": 0,
+   "recovery": [
+    "Use portal intercept survey as a fallback"
+   ],
+   "src": [
+    "s6_3e"
+   ],
+   "short": "Pulse survey"
+  }
+ ],
+ "deadlines": [
+  {
+   "id": "T1",
+   "label": "SOW term ends",
+   "date": "2027-08-31",
+   "kind": "term",
+   "check": "D21",
+   "src": [
+    "s13"
+   ]
+  },
+  {
+   "id": "T2",
+   "label": "Board update, latest reading of Q3",
+   "date": "2027-09-30",
+   "kind": "external",
+   "check": "D20",
+   "origin": "inferred",
+   "src": [
+    "s1_5board"
+   ]
+  }
+ ],
+ "contingency_terms": [
+  {
+   "trigger": "LVH is late on a responsibility",
+   "rule": "IBM notifies LVH and the parties use change control for any effect on schedule, fees or deliverables.",
+   "src": [
+    "s6intro"
+   ]
+  },
+  {
+   "trigger": "Start conditions not met by Jan 4",
+   "rule": "The start date moves to the Monday after they are met. Every week moves with it.",
+   "src": [
+    "s6_1"
+   ]
+  },
+  {
+   "trigger": "An assumption turns out wrong",
+   "rule": "Either party can raise a Project Change Request to adjust scope, schedule or fees.",
+   "src": [
+    "s9intro"
+   ]
+  },
+  {
+   "trigger": "Something needs to change",
+   "rule": "Submit a PCR. IBM assesses impact in 5 business days, LVH decides in 5 more. Over $100,000 or moving a go-live needs the Steering Committee.",
+   "src": [
+    "s10a",
+    "s10b"
+   ]
+  },
+  {
+   "trigger": "A deliverable is rejected",
+   "rule": "IBM fixes and resubmits, and the 5 day review restarts.",
+   "src": [
+    "s12fix"
+   ]
+  },
+  {
+   "trigger": "A forum does not meet for a gate",
+   "rule": "After 5 business days, the gate completes when IBM meets the entry criteria in D1.",
+   "src": [
+    "s12gov"
+   ]
+  },
+  {
+   "trigger": "An issue is stuck",
+   "rule": "Leads have 2 business days, then the Engagement Manager and Client PM have 3, then the Steering Committee meets within 5.",
+   "src": [
+    "s8_4a",
+    "s8_4b"
+   ]
+  },
+  {
+   "trigger": "More support needed after go-live",
+   "rule": "LVH can add up to 8 weeks of hypercare by Week 30, capped at $420,000.",
+   "src": [
+    "s11_3"
+   ]
+  }
+ ],
+ "payments": [
+  {
+   "id": "PM1",
+   "label": "Charter accepted",
+   "trigger": "D1",
+   "amount": 486000,
+   "pct": 10,
+   "src": [
+    "s11_1a"
+   ]
+  },
+  {
+   "id": "PM2",
+   "label": "Discovery Sign-off",
+   "trigger": "D3",
+   "amount": 729000,
+   "pct": 15,
+   "src": [
+    "s11_1b"
+   ]
+  },
+  {
+   "id": "PM3",
+   "label": "Design Approval",
+   "trigger": "D8",
+   "amount": 972000,
+   "pct": 20,
+   "src": [
+    "s11_1c"
+   ]
+  },
+  {
+   "id": "PM4",
+   "label": "Pilot Go/No-Go",
+   "trigger": "D14",
+   "amount": 972000,
+   "pct": 20,
+   "src": [
+    "s11_1d"
+   ]
+  },
+  {
+   "id": "PM5",
+   "label": "Full Go-Live",
+   "trigger": "D19",
+   "amount": 972000,
+   "pct": 20,
+   "src": [
+    "s11_1e"
+   ]
+  },
+  {
+   "id": "PM6",
+   "label": "Final Acceptance",
+   "trigger": "D21",
+   "amount": 729000,
+   "pct": 15,
+   "src": [
+    "s11_1f"
+   ]
+  }
+ ],
+ "fees": {
+  "model": "fixed",
+  "fixed": 4860000,
+  "currency": "USD",
+  "payment_terms_days": 45,
+  "expenses": {
+   "cap": 340200,
+   "text": "Travel and living at actual cost, billed monthly under LVH's travel policy. Capped at 7% of the fee without written approval.",
+   "src": [
+    "s11_2"
+   ]
+  },
+  "options": [
+   {
+    "label": "Hypercare extension",
+    "amount": 420000,
+    "text": "Up to 8 more weeks at a blended $210 an hour, time and materials. Exercise in writing by Week 30.",
+    "src": [
+     "s11_3"
+    ]
+   }
+  ],
+  "excluded": [
+   {
+    "text": "Software and cloud subscriptions, including watsonx",
+    "src": [
+     "s5g"
+    ]
+   },
+   {
+    "text": "Clinical criteria licenses and any criteria vendor fees for automated use",
+    "src": [
+     "s5e"
+    ]
+   },
+   {
+    "text": "UM Platform vendor configuration or custom development",
+    "src": [
+     "s5h"
+    ]
+   }
+  ],
+  "invoicing": [
+   {
+    "label": "When",
+    "text": "Each payment milestone is invoiced when it is achieved.",
+    "src": [
+     "s11_4"
+    ]
+   },
+   {
+    "label": "Due",
+    "text": "45 days from invoice date.",
+    "src": [
+     "s11_4"
+    ]
+   },
+   {
+    "label": "Disputes",
+    "text": "Raised in writing within 15 days of the invoice date.",
+    "src": [
+     "s11_4"
+    ]
+   },
+   {
+    "label": "PCR assessments",
+    "text": "Over 8 hours on one PCR is billable at the Section 11.3 rate, if LVH approves the work in advance.",
+    "src": [
+     "s10c"
+    ]
+   }
+  ]
+ },
+ "org": {
+  "levels": [
+   {
+    "name": "Larkspur Valley Health",
+    "label": "Enterprise",
+    "fact": "$6.8B revenue, about 21,000 people, not-for-profit, Columbus, Ohio",
+    "src": [
+     "s1_1a"
+    ],
+    "node": "lvh"
+   },
+   {
+    "name": "Larkspur Health Plan",
+    "label": "Division",
+    "fact": "640,000 members across Medicare Advantage, Medicaid and Commercial",
+    "src": [
+     "s1_2a"
+    ],
+    "node": "plan"
+   },
+   {
+    "name": "Clinical Operations",
+    "label": "Function",
+    "fact": "Led by the Plan Chief Medical Officer, the Executive Sponsor",
+    "src": [
+     "s1_3um",
+     "s8_2a"
+    ],
+    "node": "clinops"
+   },
+   {
+    "name": "Utilization Management",
+    "label": "Department",
+    "fact": "About 260 staff in three teams",
+    "src": [
+     "s1_3um"
+    ],
+    "node": "um"
+   },
+   {
+    "name": "Prior authorization",
+    "label": "Process",
+    "fact": "410,000 requests in 12 months",
+    "src": [
+     "s1_4vol"
+    ]
+   },
+   {
+    "name": "Three service categories",
+    "label": "Project scope",
+    "fact": "Advanced imaging, DME and home health, outpatient surgery",
+    "src": [
+     "s3_1"
+    ]
+   }
+  ],
+  "tree": {
+   "id": "lvh",
+   "name": "Larkspur Valley Health",
+   "kind": "Enterprise",
+   "relation": "context",
+   "size": "21,000 people, $6.8B",
+   "does": "Not-for-profit integrated delivery and financing system: it runs hospitals and clinics and also owns the health plan that pays for care.",
+   "touch": "Client entity on the SOW.",
+   "src": [
+    "s1_1a"
+   ],
+   "children": [
+    {
+     "id": "hosp",
+     "name": "Larkspur Hospitals & Clinics",
+     "kind": "Division",
+     "relation": "pilot",
+     "size": "6 hospitals, 140 sites",
+     "does": "Provides care: six acute care hospitals, 140 ambulatory sites and the Larkspur Medical Group.",
+     "touch": "A high-volume submitter of prior auth requests to the Plan. Takes part as a pilot provider group.",
+     "src": [
+      "s1_1b",
+      "s1_3hosp"
+     ],
+     "children": [
+      {
+       "id": "hosp_acute",
+       "name": "Acute care hospitals",
+       "kind": "Unit",
+       "relation": "context",
+       "size": "6",
+       "does": "Inpatient and emergency care.",
+       "touch": "Not directly involved.",
+       "src": [
+        "s1_1b"
+       ]
+      },
+      {
+       "id": "hosp_amb",
+       "name": "Ambulatory sites",
+       "kind": "Unit",
+       "relation": "context",
+       "size": "140",
+       "does": "Outpatient clinics and services.",
+       "touch": "Not directly involved.",
+       "src": [
+        "s1_1b"
+       ]
+      },
+      {
+       "id": "lmg",
+       "name": "Larkspur Medical Group",
+       "kind": "Unit",
+       "relation": "pilot",
+       "does": "The medical group within Larkspur Hospitals & Clinics.",
+       "touch": "Pilot provider group for advanced imaging in Week 24.",
+       "src": [
+        "s1_1b",
+        "s3_6d"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plan",
+     "name": "Larkspur Health Plan",
+     "kind": "Division",
+     "relation": "sponsor",
+     "size": "640,000 members",
+     "does": "The wholly owned health plan. Medicare Advantage (about 180,000), Medicaid managed care (about 290,000) and Commercial and marketplace (about 170,000).",
+     "touch": "Where the project lives. Its strategy, Simpler Care, Sooner, is the reason for the work.",
+     "people": [
+      "Plan President (sits on the Steering Committee)"
+     ],
+     "src": [
+      "s1_2a",
+      "s1_2strat",
+      "s8_3a"
+     ],
+     "children": [
+      {
+       "id": "clinops",
+       "name": "Clinical Operations",
+       "kind": "Function",
+       "relation": "sponsor",
+       "does": "Clinical functions of the Plan, led by the Chief Medical Officer.",
+       "touch": "The Executive Sponsor's organization.",
+       "people": [
+        "Dr. Renata Okafor, CMO and Executive Sponsor"
+       ],
+       "src": [
+        "s1_3um",
+        "s8_2a"
+       ],
+       "children": [
+        {
+         "id": "um",
+         "name": "Utilization Management",
+         "kind": "Department",
+         "relation": "in_scope",
+         "size": "about 260 staff",
+         "does": "Decides whether requested services are medically necessary and covered before they happen. Also has 13 UM analysts.",
+         "touch": "Primary home of the change. New process, AI intake, rules, clinical summaries, new role descriptions.",
+         "people": [
+          "Marcus Hale, Director of UM Operations (Client PM)",
+          "Dr. Priya Raman, Medical Director (Clinical Policy Owner)"
+         ],
+         "src": [
+          "s1_3um",
+          "s8_2a"
+         ],
+         "children": [
+          {
+           "id": "um_intake",
+           "name": "Intake & Triage",
+           "kind": "Team",
+           "relation": "in_scope",
+           "size": "about 95 coordinators",
+           "does": "Receives requests and keys fax and phone requests into the UM Platform.",
+           "touch": "Biggest role change. AI does first-pass reading; coordinators verify low-confidence cases.",
+           "src": [
+            "s1_3um",
+            "s1_4keying",
+            "s2_3b"
+           ]
+          },
+          {
+           "id": "um_nurse",
+           "name": "Clinical Review",
+           "kind": "Team",
+           "relation": "in_scope",
+           "size": "about 140 nurses",
+           "does": "Applies licensed clinical criteria to decide medical necessity.",
+           "touch": "Gets AI clinical summaries. Low-risk cases skip the queue through Auto-Approval Rules.",
+           "src": [
+            "s1_3um",
+            "s1_4review",
+            "s3_2"
+           ]
+          },
+          {
+           "id": "um_md",
+           "name": "Physician Review",
+           "kind": "Team",
+           "relation": "in_scope",
+           "size": "12 medical directors",
+           "does": "Reviews the roughly 14% of requests nurses escalate.",
+           "touch": "Uses the same clinical summaries. Adverse determinations stay with licensed clinicians.",
+           "src": [
+            "s1_3um",
+            "s1_4review",
+            "s2_3a"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "pns",
+       "name": "Provider Network Services",
+       "kind": "Department",
+       "relation": "involved",
+       "does": "Provider relations and the provider portal.",
+       "touch": "Runs the provider adoption campaign with IBM.",
+       "people": [
+        "Tom Brandt, Director (Provider Adoption Lead)"
+       ],
+       "src": [
+        "s1_3pns",
+        "s8_2a"
+       ]
+      },
+      {
+       "id": "ms",
+       "name": "Member Services",
+       "kind": "Department",
+       "relation": "involved",
+       "does": "Handles member questions, including authorization status.",
+       "touch": "Takes part in discovery workshops.",
+       "src": [
+        "s1_3pns",
+        "s3_1"
+       ]
+      },
+      {
+       "id": "comp",
+       "name": "Compliance Office",
+       "kind": "Department",
+       "relation": "involved",
+       "does": "Regulatory compliance for the Plan.",
+       "touch": "Sits on the Design Authority. CMS-0057-F reporting is the driver.",
+       "people": [
+        "Janelle Price, Plan Compliance Officer"
+       ],
+       "src": [
+        "s1_3pns",
+        "s8_2a",
+        "s8_3b"
+       ]
+      },
+      {
+       "id": "ag",
+       "name": "Appeals & Grievances",
+       "kind": "Department",
+       "relation": "out",
+       "does": "Handles member and provider appeals.",
+       "touch": "Out of scope. The appeals process is not redesigned.",
+       "src": [
+        "s1_3out",
+        "s5d"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shared",
+     "name": "LVH Shared Services",
+     "kind": "Division",
+     "relation": "involved",
+     "does": "IT, Information Security, Finance, HR and Legal & Privacy for both divisions.",
+     "touch": "Runs the systems and approves security and privacy.",
+     "src": [
+      "s1_1c"
+     ],
+     "children": [
+      {
+       "id": "it",
+       "name": "Information Technology",
+       "kind": "Function",
+       "relation": "involved",
+       "does": "Enterprise technology for LVH.",
+       "touch": "Owns the platforms the solution plugs into.",
+       "src": [
+        "s1_1c"
+       ],
+       "children": [
+        {
+         "id": "entapps",
+         "name": "Enterprise Applications",
+         "kind": "Group",
+         "relation": "involved",
+         "does": "Operates the UM Platform.",
+         "touch": "Provides test environments, receives runbooks at handover.",
+         "people": [
+          "Elena Sorvino, VP Enterprise Applications (IT Lead)"
+         ],
+         "src": [
+          "s1_3pns",
+          "s8_2a",
+          "s4_d21"
+         ]
+        }
+       ]
+      },
+      {
+       "id": "infosec",
+       "name": "Information Security",
+       "kind": "Function",
+       "relation": "involved",
+       "does": "Security review and approval.",
+       "touch": "Approves the architecture (D6). Sits on the Design Authority.",
+       "src": [
+        "s4_d6",
+        "s8_3b"
+       ]
+      },
+      {
+       "id": "privacy",
+       "name": "Legal & Privacy",
+       "kind": "Function",
+       "relation": "involved",
+       "does": "Legal and privacy services, including the Privacy Office.",
+       "touch": "Approves any production data used for testing.",
+       "src": [
+        "s1_1c",
+        "s6_2b"
+       ]
+      },
+      {
+       "id": "hr",
+       "name": "Human Resources",
+       "kind": "Function",
+       "relation": "involved",
+       "does": "People services.",
+       "touch": "Supports role changes. LVH owns any consultation with employees.",
+       "src": [
+        "s1_3pns",
+        "s6_3d"
+       ]
+      },
+      {
+       "id": "fin",
+       "name": "Finance",
+       "kind": "Function",
+       "relation": "context",
+       "does": "Finance services.",
+       "touch": "Not directly involved.",
+       "src": [
+        "s1_1c"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "external": [
+   {
+    "name": "UM Platform vendor",
+    "relation": "involved",
+    "text": "Its REST APIs must work without custom development. LVH manages the relationship.",
+    "src": [
+     "s9b",
+     "s6_2d"
+    ]
+   },
+   {
+    "name": "Interop Vendor",
+    "relation": "boundary",
+    "text": "Builds and runs the FHIR prior auth API under its own contract. IBM gives it a spec.",
+    "src": [
+     "s5a"
+    ]
+   },
+   {
+    "name": "Clinical criteria vendor",
+    "relation": "involved",
+    "text": "Its license must allow automated use. Any fees are LVH's.",
+    "src": [
+     "s5e",
+     "s9h"
+    ]
+   },
+   {
+    "name": "Pharmacy benefit manager",
+    "relation": "out",
+    "text": "Handles pharmacy prior auth. Out of scope.",
+    "src": [
+     "s5b"
+    ]
+   },
+   {
+    "name": "Behavioral health organization",
+    "relation": "out",
+    "text": "Delegated behavioral health UM. Out of scope.",
+    "src": [
+     "s5c"
+    ]
+   }
+  ]
+ },
+ "process": {
+  "current": [
+   {
+    "id": "C1",
+    "label": "Request arrives",
+    "actor": "Provider",
+    "detail": "Half of requests still come by fax or phone.",
+    "stats": [
+     {
+      "value": "38%",
+      "label": "fax"
+     },
+     {
+      "value": "12%",
+      "label": "phone"
+     },
+     {
+      "value": "50%",
+      "label": "portal"
+     }
+    ],
+    "pain": "Half on paper or phone",
+    "src": [
+     "s1_4chan"
+    ]
+   },
+   {
+    "id": "C2",
+    "label": "Keyed in by hand",
+    "actor": "Intake coordinator",
+    "detail": "Fax and phone requests are typed into the UM Platform.",
+    "stats": [
+     {
+      "value": "22 min",
+      "label": "per request"
+     }
+    ],
+    "pain": "Manual re-keying",
+    "src": [
+     "s1_4keying"
+    ]
+   },
+   {
+    "id": "C3",
+    "label": "Is it even needed?",
+    "actor": "Intake coordinator",
+    "detail": "Many requests are for services that do not need prior auth.",
+    "stats": [
+     {
+      "value": "18%",
+      "label": "not required"
+     }
+    ],
+    "pain": "Wasted requests",
+    "src": [
+     "s1_4notreq"
+    ]
+   },
+   {
+    "id": "C4",
+    "label": "Documentation check",
+    "actor": "Nurse reviewer",
+    "detail": "Requests missing clinical records are pended and sent back.",
+    "stats": [
+     {
+      "value": "42%",
+      "label": "pended"
+     },
+     {
+      "value": "+3.2 days",
+      "label": "added"
+     }
+    ],
+    "pain": "Back-and-forth",
+    "loop": {
+     "to": "C1",
+     "label": "back to provider"
+    },
+    "src": [
+     "s1_4pend"
+    ]
+   },
+   {
+    "id": "C5",
+    "label": "Nurse review",
+    "actor": "Nurse reviewer",
+    "detail": "Nurses apply licensed clinical criteria. Almost nothing is approved without a person.",
+    "stats": [
+     {
+      "value": "<4%",
+      "label": "no-touch"
+     }
+    ],
+    "pain": "Everything queues for a nurse",
+    "src": [
+     "s1_4review",
+     "s1_4time"
+    ]
+   },
+   {
+    "id": "C6",
+    "label": "Physician review",
+    "actor": "Medical director",
+    "detail": "Nurses escalate a share of requests to a medical director.",
+    "stats": [
+     {
+      "value": "14%",
+      "label": "escalated"
+     }
+    ],
+    "src": [
+     "s1_4review"
+    ]
+   },
+   {
+    "id": "C7",
+    "label": "Decision sent",
+    "actor": "UM",
+    "detail": "By fax and letter. Providers call to check status.",
+    "stats": [
+     {
+      "value": "1.8",
+      "label": "calls per request"
+     },
+     {
+      "value": "9.4 days",
+      "label": "median"
+     }
+    ],
+    "pain": "Status calls",
+    "src": [
+     "s1_4review",
+     "s1_4time"
+    ]
+   }
+  ],
+  "future": [
+   {
+    "id": "N1",
+    "label": "Check if prior auth is needed",
+    "actor": "Provider, at submission",
+    "detail": "An automated check tells the provider at the time of submission whether the service needs prior auth.",
+    "stats": [],
+    "maps_to": [
+     "C3"
+    ],
+    "src": [
+     "s3_2"
+    ]
+   },
+   {
+    "id": "N2",
+    "label": "Submit electronically",
+    "actor": "Provider",
+    "detail": "Portal or EDI, and the FHIR API through the Interop Vendor. Campaign targets the 200 heaviest fax users.",
+    "stats": [
+     {
+      "value": "75%",
+      "label": "electronic target"
+     }
+    ],
+    "maps_to": [
+     "C1"
+    ],
+    "src": [
+     "s2_2c",
+     "s3_3",
+     "s4_d18"
+    ]
+   },
+   {
+    "id": "N3",
+    "label": "AI reads and files it",
+    "actor": "watsonx intake",
+    "detail": "Classifies documents, extracts member, provider, service and diagnosis, and creates the case. Low confidence goes to a coordinator.",
+    "stats": [
+     {
+      "value": "6 min",
+      "label": "fax handling target"
+     }
+    ],
+    "maps_to": [
+     "C2",
+     "C4"
+    ],
+    "src": [
+     "s3_2",
+     "s2_3b",
+     "s2_2e"
+    ]
+   },
+   {
+    "id": "N4",
+    "label": "Rules approve low-risk cases",
+    "actor": "Auto-Approval Rules",
+    "detail": "Up to 120 rules approved by the Clinical Policy Owner. They approve or route to a person, never deny.",
+    "stats": [
+     {
+      "value": "25%",
+      "label": "no-touch target"
+     }
+    ],
+    "maps_to": [
+     "C5"
+    ],
+    "src": [
+     "s3_2",
+     "s2_3a"
+    ]
+   },
+   {
+    "id": "N5",
+    "label": "Nurse review with AI summary",
+    "actor": "Nurse reviewer",
+    "detail": "Relevant information from the records is laid out next to the criteria.",
+    "stats": [
+     {
+      "value": "20%",
+      "label": "pended target"
+     }
+    ],
+    "maps_to": [
+     "C4",
+     "C5"
+    ],
+    "src": [
+     "s3_2",
+     "s2_2f"
+    ]
+   },
+   {
+    "id": "N6",
+    "label": "Physician review",
+    "actor": "Medical director",
+    "detail": "Every adverse determination is made by a licensed clinician.",
+    "stats": [],
+    "maps_to": [
+     "C6"
+    ],
+    "src": [
+     "s2_3a"
+    ]
+   },
+   {
+    "id": "N7",
+    "label": "Decision, tracked",
+    "actor": "UM",
+    "detail": "Each decision records how it was made, and a dashboard shows the Success Measures alongside daily operational metrics.",
+    "stats": [
+     {
+      "value": "5 days",
+      "label": "median target"
+     }
+    ],
+    "maps_to": [
+     "C7"
+    ],
+    "src": [
+     "s2_3c",
+     "s3_3",
+     "s2_2a"
+    ]
+   }
+  ],
+  "flow": {
+   "total": 410000,
+   "unit": "requests a year",
+   "origin": "inferred",
+   "columns": [
+    {
+     "label": "How it arrives",
+     "nodes": [
+      {
+       "id": "fax",
+       "label": "Fax"
+      },
+      {
+       "id": "phone",
+       "label": "Phone"
+      },
+      {
+       "id": "portal",
+       "label": "Portal or EDI"
+      }
+     ]
+    },
+    {
+     "label": "What happens first",
+     "nodes": [
+      {
+       "id": "notreq",
+       "label": "Caught at the check"
+      },
+      {
+       "id": "manual",
+       "label": "Keyed by hand"
+      },
+      {
+       "id": "ai",
+       "label": "AI intake"
+      },
+      {
+       "id": "direct",
+       "label": "Straight in"
+      }
+     ]
+    },
+    {
+     "label": "Who decides",
+     "nodes": [
+      {
+       "id": "stop",
+       "label": "Needed no prior auth"
+      },
+      {
+       "id": "auto",
+       "label": "Rules approve"
+      },
+      {
+       "id": "nurse",
+       "label": "Nurse"
+      },
+      {
+       "id": "md",
+       "label": "Medical director"
+      }
+     ]
+    }
+   ],
+   "today": [
+    {
+     "from": "fax",
+     "to": "manual",
+     "value": 155800
+    },
+    {
+     "from": "phone",
+     "to": "manual",
+     "value": 49200
+    },
+    {
+     "from": "portal",
+     "to": "direct",
+     "value": 205000
+    },
+    {
+     "from": "manual",
+     "to": "stop",
+     "value": 36900
+    },
+    {
+     "from": "manual",
+     "to": "auto",
+     "value": 8200
+    },
+    {
+     "from": "manual",
+     "to": "nurse",
+     "value": 131200
+    },
+    {
+     "from": "manual",
+     "to": "md",
+     "value": 28700
+    },
+    {
+     "from": "direct",
+     "to": "stop",
+     "value": 36900
+    },
+    {
+     "from": "direct",
+     "to": "auto",
+     "value": 8200
+    },
+    {
+     "from": "direct",
+     "to": "nurse",
+     "value": 131200
+    },
+    {
+     "from": "direct",
+     "to": "md",
+     "value": 28700
+    }
+   ],
+   "target": [
+    {
+     "from": "fax",
+     "to": "notreq",
+     "value": 14760
+    },
+    {
+     "from": "fax",
+     "to": "ai",
+     "value": 67240
+    },
+    {
+     "from": "phone",
+     "to": "notreq",
+     "value": 3690
+    },
+    {
+     "from": "phone",
+     "to": "manual",
+     "value": 16810
+    },
+    {
+     "from": "portal",
+     "to": "notreq",
+     "value": 55350
+    },
+    {
+     "from": "portal",
+     "to": "direct",
+     "value": 252150
+    },
+    {
+     "from": "notreq",
+     "to": "stop",
+     "value": 73800
+    },
+    {
+     "from": "ai",
+     "to": "auto",
+     "value": 20500
+    },
+    {
+     "from": "ai",
+     "to": "nurse",
+     "value": 37440
+    },
+    {
+     "from": "ai",
+     "to": "md",
+     "value": 9300
+    },
+    {
+     "from": "manual",
+     "to": "auto",
+     "value": 4100
+    },
+    {
+     "from": "manual",
+     "to": "nurse",
+     "value": 10230
+    },
+    {
+     "from": "manual",
+     "to": "md",
+     "value": 2480
+    },
+    {
+     "from": "direct",
+     "to": "auto",
+     "value": 77900
+    },
+    {
+     "from": "direct",
+     "to": "nurse",
+     "value": 128630
+    },
+    {
+     "from": "direct",
+     "to": "md",
+     "value": 45620
+    }
+   ],
+   "note": "Illustration only. Applies the SOW's percentages to the 410,000 requests from the last 12 months. Today, every fax and phone request is keyed by hand and the 18% that need no prior auth are only stopped once they reach review. The target view assumes all three categories are live, 75% electronic (split here as 20% fax and 5% phone), 25% approved by rules, 14% sent to a medical director, and the 18% caught by the check at submission. It is not a commitment.",
+   "src": [
+    "s1_4vol",
+    "s1_4chan",
+    "s1_4keying",
+    "s1_4notreq",
+    "s1_4review",
+    "s2_2c",
+    "s2_2d",
+    "s3_2"
+   ],
+   "kpis": [
+    {
+     "node": "manual",
+     "label": "keyed in by hand",
+     "better": "down"
+    },
+    {
+     "node": "auto",
+     "label": "approved by rules, no nurse needed",
+     "better": "up"
+    },
+    {
+     "node": "nurse",
+     "label": "waiting in a nurse's queue",
+     "better": "down"
+    }
+   ]
+  }
+ },
+ "people": {
+  "ibm": [
+   {
+    "id": "km",
+    "name": "Kavita Menon",
+    "role": "Partner and Engagement Executive",
+    "src": [
+     "s8_1"
+    ]
+   },
+   {
+    "id": "dl",
+    "name": "David Lund",
+    "role": "Engagement Manager",
+    "note": "Not reassigned in Phases 2 and 3 without consent",
+    "src": [
+     "s8_1",
+     "s8_1keep"
+    ]
+   },
+   {
+    "id": "bo",
+    "name": "Ben Ochoa",
+    "role": "Process Studio and Process Mining Lead",
+    "src": [
+     "s8_1"
+    ]
+   },
+   {
+    "id": "sm",
+    "name": "Sofia Marquez",
+    "role": "AI Solution Lead",
+    "note": "Not reassigned in Phases 2 and 3 without consent",
+    "src": [
+     "s8_1",
+     "s8_1keep"
+    ]
+   },
+   {
+    "id": "ap",
+    "name": "Arjun Patel",
+    "role": "Integration Architect",
+    "src": [
+     "s8_1"
+    ]
+   },
+   {
+    "id": "hk",
+    "name": "Hannah Kim",
+    "role": "Change and Adoption Lead",
+    "src": [
+     "s8_1"
+    ]
+   }
+  ],
+  "client": [
+   {
+    "id": "ro",
+    "name": "Dr. Renata Okafor",
+    "role": "Executive Sponsor",
+    "title": "Chief Medical Officer of the Plan",
+    "src": [
+     "s8_2a"
+    ]
+   },
+   {
+    "id": "mh",
+    "name": "Marcus Hale",
+    "role": "Client Project Manager",
+    "title": "Director of UM Operations",
+    "src": [
+     "s8_2a"
+    ]
+   },
+   {
+    "id": "pr",
+    "name": "Dr. Priya Raman",
+    "role": "Clinical Policy Owner",
+    "title": "Medical Director, Utilization Management",
+    "src": [
+     "s8_2a"
+    ]
+   },
+   {
+    "id": "es",
+    "name": "Elena Sorvino",
+    "role": "IT Lead",
+    "title": "VP, Enterprise Applications",
+    "src": [
+     "s8_2a"
+    ]
+   },
+   {
+    "id": "tb",
+    "name": "Tom Brandt",
+    "role": "Provider Adoption Lead",
+    "title": "Director of Provider Network Services",
+    "src": [
+     "s8_2a"
+    ]
+   },
+   {
+    "id": "jp",
+    "name": "Janelle Price",
+    "role": "Compliance Advisor",
+    "title": "Plan Compliance Officer",
+    "src": [
+     "s8_2a"
+    ]
+   },
+   {
+    "id": "uat",
+    "name": "To be named",
+    "role": "Client UM Lead for UAT",
+    "title": "Named by Week 18",
+    "tbd": true,
+    "src": [
+     "s8_2uat"
+    ]
+   }
+  ],
+  "pairs": [
+   {
+    "area": "Sponsorship",
+    "ibm": [
+     "km"
+    ],
+    "client": [
+     "ro"
+    ],
+    "origin": "inferred"
+   },
+   {
+    "area": "Day-to-day delivery",
+    "ibm": [
+     "dl"
+    ],
+    "client": [
+     "mh"
+    ],
+    "origin": "inferred"
+   },
+   {
+    "area": "Process discovery",
+    "ibm": [
+     "bo"
+    ],
+    "client": [
+     "mh"
+    ],
+    "origin": "inferred"
+   },
+   {
+    "area": "Clinical policy and AI",
+    "ibm": [
+     "sm"
+    ],
+    "client": [
+     "pr"
+    ],
+    "origin": "sow",
+    "note": "Co-chairs of the Design Authority"
+   },
+   {
+    "area": "Systems and integration",
+    "ibm": [
+     "ap"
+    ],
+    "client": [
+     "es"
+    ],
+    "origin": "inferred"
+   },
+   {
+    "area": "Change and providers",
+    "ibm": [
+     "hk"
+    ],
+    "client": [
+     "tb"
+    ],
+    "origin": "inferred"
+   },
+   {
+    "area": "Compliance",
+    "ibm": [],
+    "client": [
+     "jp"
+    ],
+    "origin": "inferred",
+    "note": "No named IBM counterpart"
+   },
+   {
+    "area": "Testing sign-off",
+    "ibm": [
+     "ap"
+    ],
+    "client": [
+     "uat"
+    ],
+    "origin": "inferred"
+   }
+  ],
+  "forums": [
+   {
+    "id": "esc",
+    "name": "Executive Steering Committee",
+    "cadence": "Monthly and at each gate",
+    "every_weeks": 4,
+    "active": [
+     1,
+     32
+    ],
+    "at_gates": true,
+    "chair": "Dr. Renata Okafor",
+    "members": "Plan President, IBM Partner, Engagement Manager, Client PM, IT Lead",
+    "decides": "Gates, design principle changes, PCRs over $100,000 or that move a go-live",
+    "src": [
+     "s8_3a"
+    ]
+   },
+   {
+    "id": "da",
+    "name": "Design Authority",
+    "cadence": "Every two weeks, Phases 2 and 3",
+    "every_weeks": 2,
+    "active": [
+     7,
+     25
+    ],
+    "chair": "Dr. Priya Raman and Sofia Marquez",
+    "members": "IT Lead, Integration Architect, Compliance Advisor, Information Security",
+    "decides": "Architecture, rule logic, confidence thresholds, model changes",
+    "src": [
+     "s8_3b"
+    ]
+   },
+   {
+    "id": "wsm",
+    "name": "Weekly Status Meeting",
+    "cadence": "Weekly",
+    "every_weeks": 1,
+    "active": [
+     1,
+     32
+    ],
+    "chair": "David Lund and Marcus Hale",
+    "members": "Not specified in the SOW",
+    "decides": "Progress, risks, issues, decisions, upcoming client duties",
+    "src": [
+     "s8_3c"
+    ]
+   },
+   {
+    "id": "su",
+    "name": "Workstream stand-ups",
+    "cadence": "At least three times a week",
+    "every_weeks": 0.34,
+    "active": [
+     1,
+     32
+    ],
+    "chair": "Each workstream lead",
+    "members": "Workstream team",
+    "decides": "Day-to-day work",
+    "src": [
+     "s8_3d"
+    ]
+   }
+  ],
+  "decisions": [
+   {
+    "decision": "Discovery Sign-off, Go/No-Go, Scale Decision",
+    "by": "Executive Steering Committee",
+    "src": [
+     "s4_d3",
+     "s4_d14",
+     "s4_d16"
+    ]
+   },
+   {
+    "decision": "Design Approval (D8)",
+    "by": "Design Authority (see finding F2)",
+    "flag": "F2",
+    "src": [
+     "s4_d8",
+     "s8_3a"
+    ]
+   },
+   {
+    "decision": "Changes to the design principles",
+    "by": "Executive Steering Committee",
+    "src": [
+     "s2_3intro"
+    ]
+   },
+   {
+    "decision": "Architecture, rule logic, confidence thresholds, model changes",
+    "by": "Design Authority",
+    "src": [
+     "s8_3b"
+    ]
+   },
+   {
+    "decision": "Each Auto-Approval Rule",
+    "by": "Clinical Policy Owner, in writing",
+    "src": [
+     "s4_d5"
+    ]
+   },
+   {
+    "decision": "Architecture security approval",
+    "by": "LVH Information Security",
+    "src": [
+     "s4_d6"
+    ]
+   },
+   {
+    "decision": "UAT sign-off",
+    "by": "Client UM Lead",
+    "src": [
+     "s4_d13"
+    ]
+   },
+   {
+    "decision": "Project Charter",
+    "by": "Client Project Manager",
+    "src": [
+     "s4_d1"
+    ]
+   },
+   {
+    "decision": "PCRs over $100,000 or that move a go-live",
+    "by": "Executive Steering Committee",
+    "src": [
+     "s10b"
+    ]
+   },
+   {
+    "decision": "Other PCRs",
+    "by": "LVH, within 5 business days of the assessment",
+    "src": [
+     "s10a"
+    ]
+   }
+  ],
+  "escalation": [
+   {
+    "level": "Workstream leads",
+    "who": "IBM and LVH leads",
+    "within": "2 business days",
+    "src": [
+     "s8_4a"
+    ]
+   },
+   {
+    "level": "Project managers",
+    "who": "David Lund and Marcus Hale",
+    "within": "3 business days",
+    "src": [
+     "s8_4a"
+    ]
+   },
+   {
+    "level": "Executive Steering Committee",
+    "who": "Chaired by Dr. Okafor",
+    "within": "meets within 5 business days",
+    "src": [
+     "s8_4b"
+    ]
+   },
+   {
+    "level": "Dispute resolution",
+    "who": "Under the Master Services Agreement",
+    "within": "per the Agreement",
+    "src": [
+     "s8_4b"
+    ]
+   }
+  ]
+ },
+ "scope": {
+  "in": [
+   {
+    "text": "Process mining and a current-state model of prior auth in Process Studio",
+    "ws": "WS1",
+    "src": [
+     "s3_1"
+    ]
+   },
+   {
+    "text": "Up to 12 discovery workshops",
+    "ws": "WS1",
+    "src": [
+     "s3_1"
+    ]
+   },
+   {
+    "text": "Future-state design for three service categories",
+    "ws": "WS1",
+    "src": [
+     "s3_1"
+    ]
+   },
+   {
+    "text": "AI intake service on watsonx",
+    "ws": "WS2",
+    "src": [
+     "s3_2"
+    ]
+   },
+   {
+    "text": "Up to 120 Auto-Approval Rules",
+    "ws": "WS2",
+    "src": [
+     "s3_2"
+    ]
+   },
+   {
+    "text": "Prior auth requirement check at submission",
+    "ws": "WS2",
+    "src": [
+     "s3_2"
+    ]
+   },
+   {
+    "text": "AI clinical summary for nurse reviewers",
+    "ws": "WS2",
+    "src": [
+     "s3_2"
+    ]
+   },
+   {
+    "text": "Integrations to the UM Platform REST APIs",
+    "ws": "WS3",
+    "src": [
+     "s3_3"
+    ]
+   },
+   {
+    "text": "Prior auth operations dashboard",
+    "ws": "WS3",
+    "src": [
+     "s3_3"
+    ]
+   },
+   {
+    "text": "Change impact, adoption strategy, playbooks",
+    "ws": "WS4",
+    "src": [
+     "s3_4"
+    ]
+   },
+   {
+    "text": "Train-the-trainer for up to 40 super users",
+    "ws": "WS4",
+    "src": [
+     "s3_4"
+    ]
+   },
+   {
+    "text": "Provider adoption campaign",
+    "ws": "WS4",
+    "src": [
+     "s3_4"
+    ]
+   },
+   {
+    "text": "Plan, logs, status, Steering Committee packs, change control",
+    "ws": "WS5",
+    "src": [
+     "s3_5"
+    ]
+   }
+  ],
+  "boundary": [
+   {
+    "text": "FHIR prior authorization API",
+    "ibm_role": "Writes the interface spec (in D6) and joins up to four joint test sessions",
+    "owner": "Interop Vendor",
+    "src": [
+     "s5a"
+    ]
+   },
+   {
+    "text": "Provider contracting, gold-carding, which services need prior auth",
+    "ibm_role": "May model the impact on request",
+    "owner": "LVH",
+    "src": [
+     "s5f"
+    ]
+   },
+   {
+    "text": "End-user training",
+    "ibm_role": "Trains up to 40 super users",
+    "owner": "LVH trains everyone else",
+    "src": [
+     "s5i",
+     "s6_3c"
+    ]
+   }
+  ],
+  "out": [
+   {
+    "text": "Pharmacy prior authorization",
+    "owner": "Pharmacy benefit manager",
+    "src": [
+     "s5b"
+    ]
+   },
+   {
+    "text": "Behavioral health utilization management",
+    "owner": "Delegated behavioral health organization",
+    "src": [
+     "s5c"
+    ]
+   },
+   {
+    "text": "Appeals and grievances redesign",
+    "owner": "LVH",
+    "src": [
+     "s5d"
+    ]
+   },
+   {
+    "text": "Writing or licensing clinical criteria",
+    "owner": "LVH and its criteria vendor",
+    "src": [
+     "s5e"
+    ]
+   },
+   {
+    "text": "Software licenses and cloud subscriptions, including watsonx",
+    "owner": "LVH, under a separate order",
+    "src": [
+     "s5g"
+    ]
+   },
+   {
+    "text": "UM Platform vendor configuration or custom development",
+    "owner": "UM Platform vendor",
+    "src": [
+     "s5h"
+    ]
+   },
+   {
+    "text": "Supplemental intake or clinical review staff",
+    "owner": "LVH",
+    "src": [
+     "s5i"
+    ]
+   },
+   {
+    "text": "Any service category beyond the three named",
+    "owner": "Needs a PCR",
+    "src": [
+     "s5j"
+    ]
+   }
+  ],
+  "assumptions": [
+   {
+    "id": "A1",
+    "text": "Pilot volume stays under 4,500 requests a week",
+    "if_wrong": "More cases than the pilot was sized for. Support and tuning effort grows.",
+    "src": [
+     "s9a"
+    ]
+   },
+   {
+    "id": "A2",
+    "text": "UM Platform APIs need no vendor development",
+    "if_wrong": "Integration (D11) waits on the vendor, and the vendor's work is outside the fee.",
+    "src": [
+     "s9b"
+    ]
+   },
+   {
+    "id": "A3",
+    "text": "At least 85% of history has structured service and diagnosis codes",
+    "if_wrong": "The baseline and the rule design rest on thinner data. Extra cleansing work.",
+    "src": [
+     "s9c"
+    ]
+   },
+   {
+    "id": "A4",
+    "text": "A pilot and at most two more waves",
+    "if_wrong": "Each extra wave adds go-live and hypercare effort.",
+    "src": [
+     "s9d"
+    ]
+   },
+   {
+    "id": "A5",
+    "text": "watsonx in an LVH-approved IBM Cloud region, active by Week 10",
+    "if_wrong": "AI intake build (D9) cannot start on time.",
+    "src": [
+     "s9e"
+    ]
+   },
+   {
+    "id": "A6",
+    "text": "Documents and deliverables in English",
+    "if_wrong": "Multilingual extraction is extra scope.",
+    "src": [
+     "s9f"
+    ]
+   },
+   {
+    "id": "A7",
+    "text": "Mostly remote, up to 30% on-site at Riverbend",
+    "if_wrong": "More travel, and expenses approach the 7% cap.",
+    "src": [
+     "s9g"
+    ]
+   },
+   {
+    "id": "A8",
+    "text": "Criteria licenses allow automated rules",
+    "if_wrong": "Auto-approval may be blocked or bring vendor fees, which are LVH's.",
+    "src": [
+     "s9h"
+    ]
+   },
+   {
+    "id": "A9",
+    "text": "No more than two review rounds per document",
+    "if_wrong": "Extra rounds stretch the timeline.",
+    "src": [
+     "s9i"
+    ]
+   }
+  ]
+ },
+ "risks": [
+  {
+   "id": "R1",
+   "title": "Security review runs its full 15 days",
+   "likelihood": 4,
+   "impact": 4,
+   "origin": "sow",
+   "signal": "No security walkthrough booked by Week 10",
+   "contingency": "Agree a Week 13 finish in the Charter. Split approval so imaging can start build.",
+   "owner": "Elena Sorvino and Arjun Patel",
+   "links": [
+    "CD3",
+    "D8"
+   ],
+   "lens": "both",
+   "src": [
+    "s6_2c",
+    "s4_d8"
+   ]
+  },
+  {
+   "id": "R2",
+   "title": "Rule approvals bottleneck on one person",
+   "likelihood": 4,
+   "impact": 4,
+   "origin": "inferred",
+   "signal": "Rules waiting more than 5 business days for a decision",
+   "contingency": "Weekly rule review slot, approve in batches by category, and pre-check rules so sign-off is quick. Each rule still needs Dr. Raman's written approval.",
+   "owner": "Dr. Priya Raman and Sofia Marquez",
+   "links": [
+    "CD4",
+    "D5",
+    "D10"
+   ],
+   "lens": "both",
+   "src": [
+    "s6_3a",
+    "s4_d5",
+    "s3_2"
+   ]
+  },
+  {
+   "id": "R3",
+   "title": "Event log data is late or thin",
+   "likelihood": 3,
+   "impact": 4,
+   "origin": "sow",
+   "signal": "Access not granted by Week 2, or under 85% of records have codes",
+   "contingency": "Start on a 12 month extract, reconcile against operational reports, raise a PCR if structured data is short.",
+   "owner": "Marcus Hale and Ben Ochoa",
+   "links": [
+    "CD1",
+    "D2"
+   ],
+   "lens": "both",
+   "src": [
+    "s6_2a",
+    "s9c"
+   ]
+  },
+  {
+   "id": "R4",
+   "title": "UM Platform APIs fall short",
+   "likelihood": 2,
+   "impact": 5,
+   "origin": "sow",
+   "signal": "Gaps found in the interface design in Weeks 10 to 12",
+   "contingency": "Confirm API coverage in Phase 2. If vendor development is needed, raise a PCR at once.",
+   "owner": "Arjun Patel and Elena Sorvino",
+   "links": [
+    "D11",
+    "CD6"
+   ],
+   "lens": "ibm",
+   "src": [
+    "s9b",
+    "s5h"
+   ]
+  },
+  {
+   "id": "R5",
+   "title": "Providers keep faxing",
+   "likelihood": 4,
+   "impact": 3,
+   "origin": "inferred",
+   "signal": "Electronic share under 60% in the pilot",
+   "contingency": "Target the top 200 fax users first, pair with portal training, report weekly by provider group.",
+   "owner": "Tom Brandt and Hannah Kim",
+   "links": [
+    "D18",
+    "D15"
+   ],
+   "lens": "client",
+   "src": [
+    "s4_d18",
+    "s2_2c"
+   ]
+  },
+  {
+   "id": "R6",
+   "title": "The FHIR API is not ready",
+   "likelihood": 3,
+   "impact": 3,
+   "origin": "inferred",
+   "signal": "Interop Vendor has not booked the joint test sessions by Week 18",
+   "contingency": "Launch on portal and EDI, add FHIR when ready. LVH manages the vendor.",
+   "owner": "Elena Sorvino",
+   "links": [
+    "D6",
+    "D13"
+   ],
+   "lens": "client",
+   "src": [
+    "s5a",
+    "s6_2d"
+   ]
+  },
+  {
+   "id": "R7",
+   "title": "AI reads faxes with low confidence",
+   "likelihood": 3,
+   "impact": 3,
+   "origin": "inferred",
+   "signal": "More than 30% of fax cases routed to coordinators in testing",
+   "contingency": "Tune per document type, adjust thresholds through the Design Authority, track handling time separately.",
+   "owner": "Sofia Marquez",
+   "links": [
+    "D9",
+    "D13"
+   ],
+   "lens": "both",
+   "src": [
+    "s2_3b",
+    "s2_2e"
+   ]
+  },
+  {
+   "id": "R8",
+   "title": "Staff worry about their roles",
+   "likelihood": 3,
+   "impact": 4,
+   "origin": "inferred",
+   "signal": "Low attendance at super-user sessions, questions about headcount",
+   "contingency": "Lead with the role descriptions in D4 and D7. LVH runs any employee consultation.",
+   "owner": "Hannah Kim and Marcus Hale",
+   "links": [
+    "D7",
+    "D12"
+   ],
+   "lens": "client",
+   "src": [
+    "s6_3d",
+    "s4_d7"
+   ]
+  },
+  {
+   "id": "R9",
+   "title": "Criteria license blocks automation",
+   "likelihood": 2,
+   "impact": 5,
+   "origin": "sow",
+   "signal": "Criteria vendor has not confirmed automated use by Week 8",
+   "contingency": "Confirm in writing during Discovery. Fees are LVH's.",
+   "owner": "Dr. Priya Raman",
+   "links": [
+    "D5",
+    "D10"
+   ],
+   "lens": "both",
+   "src": [
+    "s9h",
+    "s5e"
+   ]
+  },
+  {
+   "id": "R10",
+   "title": "UAT testers pulled back to the queue",
+   "likelihood": 3,
+   "impact": 4,
+   "origin": "inferred",
+   "signal": "Fewer than 15 testers confirmed by Week 19",
+   "contingency": "Book testers at Design Approval, run UAT in shifts, back-fill intake.",
+   "owner": "Marcus Hale",
+   "links": [
+    "CD8",
+    "D13"
+   ],
+   "lens": "client",
+   "src": [
+    "s6_3b"
+   ]
+  },
+  {
+   "id": "R11",
+   "title": "Benefits window overlaps hypercare",
+   "likelihood": 3,
+   "impact": 3,
+   "origin": "inferred",
+   "signal": "Wave 3 issues still open in Week 30",
+   "contingency": "Report Wave 3 separately, or use the hypercare option to measure longer.",
+   "owner": "Ben Ochoa",
+   "links": [
+    "D19",
+    "D20"
+   ],
+   "lens": "ibm",
+   "src": [
+    "s2_2window",
+    "s11_3"
+   ]
+  }
+ ],
+ "obligations": [
+  {
+   "id": "O1",
+   "party": "client",
+   "text": "Sign the BAA, name client roles, issue network accounts",
+   "week": 0,
+   "kind": "provide",
+   "src": [
+    "s6_1"
+   ]
+  },
+  {
+   "id": "O2",
+   "party": "ibm",
+   "text": "Deliver the Project Charter and Integrated Plan (D1)",
+   "week": 2,
+   "kind": "deliver",
+   "src": [
+    "s4_d1"
+   ]
+  },
+  {
+   "id": "O3",
+   "party": "client",
+   "text": "Give read-only access to 24 months of event logs",
+   "week": 3,
+   "kind": "provide",
+   "src": [
+    "s6_2a"
+   ]
+  },
+  {
+   "id": "O4",
+   "party": "client",
+   "text": "Run the provider pulse survey (first round)",
+   "week": 3,
+   "kind": "provide",
+   "src": [
+    "s6_3e"
+   ]
+  },
+  {
+   "id": "O5",
+   "party": "client",
+   "text": "At least 6 nurses and 4 coordinators as SMEs, up to 4 hours a week each",
+   "week": 3,
+   "until": 13,
+   "kind": "attend",
+   "src": [
+    "s6_3b"
+   ]
+  },
+  {
+   "id": "O6",
+   "party": "ibm",
+   "text": "Deliver the baseline report (D2)",
+   "week": 6,
+   "kind": "deliver",
+   "src": [
+    "s4_d2"
+   ]
+  },
+  {
+   "id": "O7",
+   "party": "client",
+   "text": "Clinical Policy Owner at 20% time, decisions within 5 business days",
+   "week": 7,
+   "until": 25,
+   "kind": "decide",
+   "src": [
+    "s6_3a"
+   ]
+  },
+  {
+   "id": "O8",
+   "party": "client",
+   "text": "watsonx subscription active (an assumption in Section 9, so a PCR if it slips)",
+   "week": 10,
+   "kind": "provide",
+   "src": [
+    "s9e"
+   ]
+  },
+  {
+   "id": "O9",
+   "party": "client",
+   "text": "Approve every Auto-Approval Rule in writing",
+   "week": 11,
+   "kind": "decide",
+   "src": [
+    "s4_d5"
+   ]
+  },
+  {
+   "id": "O10",
+   "party": "client",
+   "text": "Finish the security review of D6 (contract deadline; the plan hopes for Week 13)",
+   "week": 15,
+   "kind": "review",
+   "src": [
+    "s6_2c"
+   ]
+  },
+  {
+   "id": "O11",
+   "party": "client",
+   "text": "Provide the UM Platform test environment with APIs on",
+   "week": 14,
+   "kind": "provide",
+   "src": [
+    "s6_2b"
+   ]
+  },
+  {
+   "id": "O12",
+   "party": "client",
+   "text": "Name the Client UM Lead for UAT",
+   "week": 18,
+   "kind": "provide",
+   "src": [
+    "s8_2uat"
+   ]
+  },
+  {
+   "id": "O13",
+   "party": "ibm",
+   "text": "Train up to 40 super users",
+   "week": 21,
+   "kind": "deliver",
+   "src": [
+    "s4_d12"
+   ]
+  },
+  {
+   "id": "O14",
+   "party": "client",
+   "text": "Provide 15 UM staff for UAT",
+   "week": 21,
+   "until": 22,
+   "kind": "attend",
+   "src": [
+    "s6_3b"
+   ]
+  },
+  {
+   "id": "O15",
+   "party": "client",
+   "text": "Train remaining UM staff before the pilot go-live",
+   "week": 23,
+   "kind": "provide",
+   "src": [
+    "s6_3c"
+   ]
+  },
+  {
+   "id": "O16",
+   "party": "ibm",
+   "text": "Elevated support for two weeks after each go-live",
+   "week": 24,
+   "until": 30,
+   "kind": "deliver",
+   "src": [
+    "s7_monday"
+   ]
+  },
+  {
+   "id": "O17",
+   "party": "client",
+   "text": "Train remaining UM staff before Wave 2 and Wave 3",
+   "week": 26,
+   "until": 28,
+   "kind": "provide",
+   "src": [
+    "s6_3c"
+   ]
+  },
+  {
+   "id": "O18",
+   "party": "client",
+   "text": "Decide on the hypercare extension, in writing",
+   "week": 30,
+   "kind": "decide",
+   "src": [
+    "s11_3"
+   ]
+  },
+  {
+   "id": "O19",
+   "party": "client",
+   "text": "Run the provider pulse survey (second round)",
+   "week": 30,
+   "kind": "provide",
+   "src": [
+    "s6_3e"
+   ]
+  },
+  {
+   "id": "O20",
+   "party": "ibm",
+   "text": "Deliver the Benefits Realization Report (D20)",
+   "week": 31,
+   "kind": "deliver",
+   "src": [
+    "s4_d20"
+   ]
+  },
+  {
+   "id": "O21",
+   "party": "ibm",
+   "text": "Hand over runbooks and knowledge transfer (D21)",
+   "week": 32,
+   "kind": "deliver",
+   "src": [
+    "s4_d21"
+   ]
+  },
+  {
+   "id": "O22",
+   "party": "client",
+   "text": "Review each deliverable within 5 business days",
+   "week": 1,
+   "until": 32,
+   "kind": "review",
+   "src": [
+    "s6_4"
+   ]
+  },
+  {
+   "id": "O23",
+   "party": "ibm",
+   "text": "Answer each PCR with an impact assessment in 5 business days",
+   "week": 1,
+   "until": 32,
+   "kind": "deliver",
+   "src": [
+    "s10a"
+   ]
+  },
+  {
+   "id": "O24",
+   "party": "client",
+   "text": "Approve or reject each PCR within 5 business days of the assessment",
+   "week": 1,
+   "until": 32,
+   "kind": "decide",
+   "src": [
+    "s10a"
+   ]
+  },
+  {
+   "id": "O25",
+   "party": "client",
+   "text": "Manage the UM Platform vendor and Interop Vendor",
+   "week": 1,
+   "until": 32,
+   "kind": "provide",
+   "src": [
+    "s6_2d"
+   ]
+  },
+  {
+   "id": "O26",
+   "party": "client",
+   "text": "Pay each invoice within 45 days",
+   "week": 2,
+   "until": 32,
+   "kind": "pay",
+   "src": [
+    "s11_4"
+   ]
+  },
+  {
+   "id": "O27",
+   "party": "client",
+   "text": "Run any consultation with employees about role changes",
+   "week": 12,
+   "until": 29,
+   "kind": "provide",
+   "src": [
+    "s6_3d"
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "When do we go live?",
+   "a": "Advanced imaging pilots in Week 24 (June 21, 2027). DME and home health follow in Week 27, and outpatient surgery in Week 29, which counts as Full Go-Live.",
+   "lens": "both",
+   "src": [
+    "s4_d15",
+    "s4_d17",
+    "s4_d19"
+   ]
+  },
+  {
+   "q": "Will a machine ever deny a request?",
+   "a": "No. Rules can approve or send a case to a person. Only a licensed clinician can make an adverse determination, and only the Steering Committee can change that.",
+   "lens": "both",
+   "src": [
+    "s2_3a",
+    "s2_3intro"
+   ]
+  },
+  {
+   "q": "Is IBM guaranteeing the 5 day target?",
+   "a": "No. The Success Measures are shared goals. Missing one is not by itself a breach, because results depend on LVH decisions, provider behavior and staffing too.",
+   "lens": "both",
+   "src": [
+    "s2_2shared"
+   ]
+  },
+  {
+   "q": "What does LVH have to do in the first month?",
+   "a": "Sign the BAA and name the roles by Jan 4, give event log access within 10 business days, make nurse and coordinator SMEs available, and run the first provider survey in Week 3.",
+   "lens": "client",
+   "src": [
+    "s6_1",
+    "s6_2a",
+    "s6_3b",
+    "s6_3e"
+   ]
+  },
+  {
+   "q": "What happens if LVH is late on something?",
+   "a": "IBM tells LVH, and the two sides use change control to agree any effect on schedule, fees or deliverables.",
+   "lens": "both",
+   "src": [
+    "s6intro"
+   ]
+  },
+  {
+   "q": "What is not included in the $4.86M?",
+   "a": "Software and subscriptions (including watsonx), criteria licenses, UM Platform vendor work, the FHIR API, end-user training beyond super users, and extra staff. Travel expenses are billed on top, capped at 7% of the fee unless LVH approves more in writing.",
+   "lens": "client",
+   "src": [
+    "s5g",
+    "s5e",
+    "s5h",
+    "s5a",
+    "s5i",
+    "s11_2"
+   ]
+  },
+  {
+   "q": "How do we change scope?",
+   "a": "Either side raises a PCR. IBM sends an impact assessment in 5 business days and LVH decides within 5 more. Anything over $100,000 or that moves a go-live goes to the Steering Committee.",
+   "lens": "both",
+   "src": [
+    "s10a",
+    "s10b"
+   ]
+  },
+  {
+   "q": "When does IBM get paid?",
+   "a": "On six milestones: Charter 10%, Discovery Sign-off 15%, Design Approval 20%, Go/No-Go 20%, Full Go-Live 20% and Final Acceptance 15%. Invoices are due in 45 days.",
+   "lens": "ibm",
+   "src": [
+    "s11_1",
+    "s11_4"
+   ]
+  },
+  {
+   "q": "What if a Steering Committee meeting cannot be scheduled?",
+   "a": "If the forum does not meet within 5 business days of IBM's request, the gate completes when IBM meets the entry criteria written in the Charter.",
+   "lens": "ibm",
+   "src": [
+    "s12gov"
+   ]
+  },
+  {
+   "q": "Can IBM move the key people?",
+   "a": "Not the Engagement Manager or the AI Solution Lead during Phases 2 and 3, without LVH's consent, except for reasons outside IBM's control.",
+   "lens": "client",
+   "src": [
+    "s8_1keep"
+   ]
+  },
+  {
+   "q": "Who signs off testing?",
+   "a": "The Client UM Lead, who has to be named by Week 18. Testing passes when there are no open Severity 1 or 2 defects.",
+   "lens": "both",
+   "src": [
+    "s4_d13",
+    "s8_2uat"
+   ]
+  },
+  {
+   "q": "Which services are covered?",
+   "a": "Three categories: advanced imaging, durable medical equipment and home health, and outpatient surgical procedures. Pharmacy and behavioral health are out.",
+   "lens": "both",
+   "src": [
+    "s3_1",
+    "s5b",
+    "s5c"
+   ]
+  }
+ ],
+ "tour": [
+  {
+   "view": "brief",
+   "title": "What this project is",
+   "text": "One sentence, the deal, and the seven numbers that define success. Everything on this page links to the clause it came from."
+  },
+  {
+   "view": "brief",
+   "focus": "findings",
+   "title": "Three things to settle now",
+   "text": "The atlas found three places where the SOW contradicts itself or leaves a gap. Settling them in Week 2 is cheap. Discovering them in Week 13 is not."
+  },
+  {
+   "view": "route",
+   "title": "The route from Week 1 to Week 32",
+   "text": "Each colored line is a workstream and each stop is a deliverable. The grey bars that cross every line are decision gates. Money sits underneath."
+  },
+  {
+   "view": "route",
+   "focus": "D15",
+   "title": "Trace any stop",
+   "text": "Pick a stop to see everything it depends on and everything that waits for it. This is the pilot go-live and its full chain."
+  },
+  {
+   "view": "route",
+   "focus": "slip:CD3:2",
+   "title": "What if security takes its full window?",
+   "text": "The SOW lets LVH take until Week 15 to review the architecture. Watch Design Approval, all three go-lives and four payments move, and Final Acceptance land after the term ends on Aug 31."
+  },
+  {
+   "view": "org",
+   "focus": "um",
+   "title": "Where the work lands",
+   "text": "From a $6.8B health system down to one department of 260 people, and the three teams whose day changes most."
+  },
+  {
+   "view": "process",
+   "title": "Today versus target",
+   "text": "The seven steps of prior auth today, where time is lost, and what each new capability replaces."
+  },
+  {
+   "view": "owes",
+   "title": "Who owes what, and when",
+   "text": "Every obligation for both sides on one timeline. Drag the week marker and anything overdue lights up."
+  }
+ ],
+ "sources": {
+  "s1_1a": {
+   "sec": "1.1",
+   "text": "LVH employs approximately 21,000 people and reported consolidated operating revenue of $6.8 billion in fiscal year 2026."
+  },
+  "s1_1b": {
+   "sec": "1.1",
+   "text": "(a) Larkspur Hospitals & Clinics, which runs six acute care hospitals, 140 ambulatory sites and the Larkspur Medical Group"
+  },
+  "s1_1c": {
+   "sec": "1.1",
+   "text": "(c) LVH Shared Services, which provides Information Technology, Information Security, Finance, Human Resources and Legal & Privacy services to both operating divisions."
+  },
+  "s1_2a": {
+   "sec": "1.2",
+   "text": "The Plan serves approximately 640,000 members across three lines of business: Medicare Advantage (approximately 180,000 members), Medicaid managed care (approximately 290,000 members) and Commercial and individual marketplace products (approximately 170,000 members)."
+  },
+  "s1_2strat": {
+   "sec": "1.2",
+   "text": "The Plan's strategic plan for 2026 through 2028, titled \"Simpler Care, Sooner,\" names reduction of administrative burden on providers and faster access to care for members as its first two enterprise priorities."
+  },
+  "s1_3um": {
+   "sec": "1.3",
+   "text": "The Services will primarily affect the Utilization Management department (\"UM\"), which sits within the Plan's Clinical Operations function under the Plan Chief Medical Officer. UM employs approximately 260 staff, consisting of approximately 95 intake coordinators, 140 nurse reviewers, 12 physician medical directors and 13 UM analysts, organized into three teams: Intake & Triage, Clinical Review and Physician Review."
+  },
+  "s1_3pns": {
+   "sec": "1.3",
+   "text": "The Services will also involve the Plan's Provider Network Services department, which manages provider relations and the provider portal; the Plan's Member Services department, which handles member inquiries about authorization status; the Plan's Compliance Office; and, within LVH Shared Services, the Enterprise Applications group of Information Technology, which operates the Client's utilization management platform (the \"UM Platform\"), as well as Information Security and Human Resources."
+  },
+  "s1_3hosp": {
+   "sec": "1.3",
+   "text": "Larkspur Hospitals & Clinics is itself a high-volume submitter of prior authorization requests to the Plan and will participate as a pilot provider group."
+  },
+  "s1_3out": {
+   "sec": "1.3",
+   "text": "The Plan's Appeals & Grievances department, the pharmacy benefit (administered by the Client's pharmacy benefit manager) and behavioral health utilization management (delegated to a third-party behavioral health organization) are not in scope, except as described in Section 5."
+  },
+  "s1_4vol": {
+   "sec": "1.4",
+   "text": "The Plan received approximately 410,000 prior authorization requests in the twelve months ending September 30, 2026."
+  },
+  "s1_4chan": {
+   "sec": "1.4",
+   "text": "Approximately 38% of requests were received by fax, 12% by telephone and 50% through the provider portal."
+  },
+  "s1_4keying": {
+   "sec": "1.4",
+   "text": "Requests received by fax or telephone are manually keyed into the UM Platform by intake coordinators, which takes an average of 22 minutes per request."
+  },
+  "s1_4notreq": {
+   "sec": "1.4",
+   "text": "Approximately 18% of all requests are submitted for services that do not require prior authorization under the member's benefit plan."
+  },
+  "s1_4pend": {
+   "sec": "1.4",
+   "text": "Approximately 42% of requests are pended for missing clinical documentation, which adds an average of 3.2 calendar days to the decision."
+  },
+  "s1_4review": {
+   "sec": "1.4",
+   "text": "Nurse reviewers apply licensed clinical criteria to determine medical necessity and escalate approximately 14% of requests to a physician medical director. Determinations are communicated by fax and letter, and providers place an average of 1.8 status calls per request to the Plan's provider services line."
+  },
+  "s1_4time": {
+   "sec": "1.4",
+   "text": "For standard (non-urgent) requests, the median time from receipt to determination is 9.4 calendar days. For expedited requests, the Plan met the 72-hour decision timeframe for 81% of requests. Fewer than 4% of requests are approved without human review."
+  },
+  "s1_5cms": {
+   "sec": "1.5",
+   "text": "The Plan is subject to the federal Interoperability and Prior Authorization requirements issued by the Centers for Medicare & Medicaid Services (CMS-0057-F), including decision timeframes of 72 hours for expedited requests and seven calendar days for standard requests for impacted lines of business, and annual public reporting of prior authorization metrics."
+  },
+  "s1_5board": {
+   "sec": "1.5",
+   "text": "The Plan's Board of Directors has asked management to report measurable improvement by the third quarter of 2027."
+  },
+  "s2_1": {
+   "sec": "2.1",
+   "text": "The objective of Project Clearpath (the \"Project\") is to redesign the Plan's prior authorization process from receipt of request to communication of determination, and to implement AI-assisted intake, automated approval of low-risk requests and AI-generated clinical summaries for reviewers, so that the Plan meets its regulatory decision timeframes and materially reduces administrative burden on providers and UM staff."
+  },
+  "s2_2window": {
+   "sec": "2.2",
+   "text": "Targets apply to the service categories that are live at the time of measurement and will be measured over the four weeks before the Benefits Realization Report described in Section 4."
+  },
+  "s2_2a": {
+   "sec": "2.2(a)",
+   "text": "Median decision time for standard requests reduced from 9.4 calendar days to 5.0 calendar days or less."
+  },
+  "s2_2b": {
+   "sec": "2.2(b)",
+   "text": "Expedited requests decided within 72 hours increased from 81% to 99% or more."
+  },
+  "s2_2c": {
+   "sec": "2.2(c)",
+   "text": "Share of requests received electronically (portal or electronic data interchange) increased from 50% to 75% or more."
+  },
+  "s2_2d": {
+   "sec": "2.2(d)",
+   "text": "Share of requests approved by automated rules without nurse review increased from less than 4% to 25% or more."
+  },
+  "s2_2e": {
+   "sec": "2.2(e)",
+   "text": "Average intake handling time for fax requests reduced from 22 minutes to 6 minutes or less."
+  },
+  "s2_2f": {
+   "sec": "2.2(f)",
+   "text": "Share of requests pended for missing documentation reduced from 42% to 20% or less."
+  },
+  "s2_2g": {
+   "sec": "2.2(g)",
+   "text": "Provider satisfaction with prior authorization increased from 2.9 to 3.8 out of 5 or more, measured by a pulse survey administered by the Client."
+  },
+  "s2_2shared": {
+   "sec": "2.2",
+   "text": "The Success Measures are shared goals. IBM's obligation is to perform the Services and provide the Deliverables in accordance with this SOW. Failure to achieve a Success Measure is not, by itself, a breach of this SOW by IBM, because achievement depends on Client decisions, provider behavior, Client staffing and other factors outside IBM's control."
+  },
+  "s2_3intro": {
+   "sec": "2.3",
+   "text": "The parties agree that the solution will follow these principles, which may only be changed by the Executive Steering Committee:"
+  },
+  "s2_3a": {
+   "sec": "2.3(a)",
+   "text": "No automated denials. Automated rules may approve a request or route it to a human reviewer. Any adverse determination will be made by an appropriately licensed clinician employed or contracted by the Client."
+  },
+  "s2_3b": {
+   "sec": "2.3(b)",
+   "text": "Where the AI intake service extracts data with a confidence score below a threshold set by the Design Authority, the case will be routed to an intake coordinator for verification."
+  },
+  "s2_3c": {
+   "sec": "2.3(c)",
+   "text": "Every automated approval and every AI clinical summary will record the criteria, source documents and model version used, so that UM staff, auditors and regulators can trace how it was produced."
+  },
+  "s3_1": {
+   "sec": "3.1",
+   "text": "IBM will then design the future-state process, including target roles, decision points and service levels, for up to three service categories: (i) advanced imaging, (ii) durable medical equipment and home health, and (iii) outpatient surgical procedures."
+  },
+  "s3_2": {
+   "sec": "3.2",
+   "text": "(c) an automated check that tells providers at the time of submission whether a service requires prior authorization; and (d) an AI-generated clinical summary that presents relevant information from the submitted records to nurse reviewers alongside the applicable criteria. IBM will configure up to 120 Auto-Approval Rules in total."
+  },
+  "s3_3": {
+   "sec": "3.3",
+   "text": "IBM will build a prior authorization operations dashboard showing the Success Measures and daily operational metrics."
+  },
+  "s3_4": {
+   "sec": "3.4",
+   "text": "deliver train-the-trainer sessions for up to 40 Client super users, and design and support a provider adoption campaign to move submitting providers from fax and telephone to electronic submission."
+  },
+  "s3_5": {
+   "sec": "3.5",
+   "text": "IBM will provide an Engagement Manager who will maintain the integrated project plan, risk and issue log and decision log, run the weekly status meeting, prepare materials for the Executive Steering Committee, and administer the change control procedure in Section 10."
+  },
+  "s3_6a": {
+   "sec": "3.6(a)",
+   "text": "Phase 0, Mobilize (Weeks 1 to 2): onboarding, access requests, confirmation of the integrated plan."
+  },
+  "s3_6b": {
+   "sec": "3.6(b)",
+   "text": "Phase 1, Discover (Weeks 3 to 8): process mining, workshops and baseline validation."
+  },
+  "s3_6c": {
+   "sec": "3.6(c)",
+   "text": "Phase 2, Design (Weeks 7 to 13): future-state process, AI use case design, Auto-Approval Rule logic and solution architecture."
+  },
+  "s3_6d": {
+   "sec": "3.6(d)",
+   "text": "Phase 3, Build and Pilot (Weeks 12 to 25): build, system integration testing, user acceptance testing and a pilot in the advanced imaging service category with the Larkspur Medical Group and up to 25 additional provider groups."
+  },
+  "s3_6e": {
+   "sec": "3.6(e)",
+   "text": "Phase 4, Scale (Weeks 25 to 29): rollout of durable medical equipment and home health (Wave 2) and outpatient surgical procedures (Wave 3)."
+  },
+  "s3_6f": {
+   "sec": "3.6(f)",
+   "text": "Phase 5, Hypercare and Handover (Weeks 29 to 32): stabilization support, benefits measurement and handover to Client operations."
+  },
+  "s3_6start": {
+   "sec": "3.6",
+   "text": "\"Week 1\" begins on the Project Start Date, which is January 11, 2027, provided the conditions in Section 6.1 are met."
+  },
+  "s4_d1": {
+   "sec": "4, D1",
+   "text": "D1. Project Charter and Integrated Plan (Week 2). Project objectives, governance, roles, integrated plan, risk log and communication plan. Acceptance criteria: approved by the Client Project Manager."
+  },
+  "s4_d2": {
+   "sec": "4, D2",
+   "text": "Acceptance criteria: baseline values reconcile to Client operational reports within 5%. This Deliverable depends on Client providing the data described in Section 6.2(a)."
+  },
+  "s4_d3": {
+   "sec": "4, D3",
+   "text": "D3. Discovery Sign-off (Week 8). A Steering Committee decision that confirms the baseline, the prioritized opportunities and the three service categories. This is a governance milestone."
+  },
+  "s4_d4": {
+   "sec": "4, D4",
+   "text": "D4. Future-State Process Design (Week 11). Future-state process models for the three service categories, target operating model, role descriptions and service levels."
+  },
+  "s4_d5": {
+   "sec": "4, D5",
+   "text": "Acceptance criteria: each Auto-Approval Rule is approved in writing by the Clinical Policy Owner."
+  },
+  "s4_d6": {
+   "sec": "4, D6",
+   "text": "D6. Solution Architecture and Integration Design (Week 12). Architecture, security design, data flows, UM Platform interface design and the Interop Vendor interface specification. Acceptance criteria: approved by the Design Authority and by LVH Information Security."
+  },
+  "s4_d7": {
+   "sec": "4, D7",
+   "text": "D7. Change Impact Assessment and Adoption Strategy (Week 12). Role-by-role impact assessment, adoption strategy, communication plan and provider adoption approach."
+  },
+  "s4_d8": {
+   "sec": "4, D8",
+   "text": "D8. Design Approval (Week 13). A Design Authority decision that approves D4, D5 and D6 for build. This is a governance milestone."
+  },
+  "s4_d9": {
+   "sec": "4, D9",
+   "text": "D9. Intelligent Intake Service (Week 19). The AI intake service, configured and deployed to the Client's test environment, with document classification and data extraction for the three service categories."
+  },
+  "s4_d10": {
+   "sec": "4, D10",
+   "text": "D10. Auto-Approval Rules and Prior Authorization Check (Week 20). Configured Auto-Approval Rules for the advanced imaging service category and the prior authorization requirement check."
+  },
+  "s4_d11": {
+   "sec": "4, D11",
+   "text": "D11. UM Platform Integration (Week 20). Built and unit-tested integrations between the solution and the UM Platform."
+  },
+  "s4_d12": {
+   "sec": "4, D12",
+   "text": "D12. Training Curriculum and Reviewer Playbooks (Week 21). Training materials for intake coordinators, nurse reviewers and medical directors, and delivery of train-the-trainer sessions."
+  },
+  "s4_d13": {
+   "sec": "4, D13",
+   "text": "D13. Test Completion Report (Week 22). Results of system integration testing and user acceptance testing. Acceptance criteria: no open Severity 1 or Severity 2 defects, and UAT signed off by the Client UM Lead."
+  },
+  "s4_d14": {
+   "sec": "4, D14",
+   "text": "D14. Pilot Go/No-Go Decision (Week 23). A Steering Committee decision to start the pilot. This is a governance milestone."
+  },
+  "s4_d15": {
+   "sec": "4, D15",
+   "text": "D15. Pilot Go-Live: Advanced Imaging (Week 24). The solution in production for the advanced imaging service category with the pilot provider groups."
+  },
+  "s4_d16": {
+   "sec": "4, D16",
+   "text": "D16. Pilot Results Report and Scale Decision (Week 26). Pilot performance against the Success Measures, lessons learned and a Steering Committee decision on whether to proceed with Waves 2 and 3."
+  },
+  "s4_d17": {
+   "sec": "4, D17",
+   "text": "D17. Wave 2 Go-Live: DME and Home Health (Week 27). Production rollout for durable medical equipment and home health, including the Auto-Approval Rules for that category."
+  },
+  "s4_d18": {
+   "sec": "4, D18",
+   "text": "D18. Provider Adoption Campaign (Week 28). Execution support for the provider adoption campaign, including provider webinars, portal guides and a targeted outreach list of the top 200 fax-submitting providers."
+  },
+  "s4_d19": {
+   "sec": "4, D19",
+   "text": "D19. Wave 3 Go-Live: Outpatient Surgical Procedures (Week 29). Production rollout for outpatient surgical procedures. Completion of D19 constitutes \"Full Go-Live.\""
+  },
+  "s4_d20": {
+   "sec": "4, D20",
+   "text": "D20. Benefits Realization Report (Week 31). Measurement of the Success Measures over the preceding four weeks against baseline."
+  },
+  "s4_d21": {
+   "sec": "4, D21",
+   "text": "D21. Operational Handover and Runbooks (Week 32). Operating runbooks, model monitoring procedures, rule maintenance procedures and knowledge transfer sessions for the Client's UM analytics and Enterprise Applications teams. Acceptance of D21 constitutes \"Final Acceptance.\""
+  },
+  "s5a": {
+   "sec": "5(a)",
+   "text": "Design, build or operation of the Client's FHIR prior authorization application programming interface, which is provided by the Interop Vendor under a separate agreement with the Client. IBM's role is limited to providing the interface specification in D6 and participating in up to four joint integration testing sessions."
+  },
+  "s5b": {
+   "sec": "5(b)",
+   "text": "Pharmacy prior authorization, which is administered by the Client's pharmacy benefit manager."
+  },
+  "s5c": {
+   "sec": "5(c)",
+   "text": "Behavioral health utilization management, which is delegated to a third-party behavioral health organization."
+  },
+  "s5d": {
+   "sec": "5(d)",
+   "text": "Redesign of the appeals and grievances process."
+  },
+  "s5e": {
+   "sec": "5(e)",
+   "text": "Authoring, editing or licensing of clinical criteria content. The Client is responsible for maintaining its licenses to clinical criteria content and for any fees charged by the criteria vendor for automated use of that content."
+  },
+  "s5f": {
+   "sec": "5(f)",
+   "text": "Decisions on provider contracting, gold-carding programs or changes to which services require prior authorization. IBM may model the impact of such decisions at the Client's request."
+  },
+  "s5g": {
+   "sec": "5(g)",
+   "text": "Software licenses and cloud subscriptions, including IBM watsonx subscriptions, which the Client will purchase under a separate order. The fees in Section 11 do not include software or subscription charges."
+  },
+  "s5h": {
+   "sec": "5(h)",
+   "text": "Configuration changes or custom development by the vendor of the UM Platform."
+  },
+  "s5i": {
+   "sec": "5(i)",
+   "text": "End-user training of UM staff beyond the train-the-trainer sessions in D12, and supplemental staffing of intake or clinical review positions."
+  },
+  "s5j": {
+   "sec": "5(j)",
+   "text": "Service categories other than the three listed in Section 3.1."
+  },
+  "s6intro": {
+   "sec": "6",
+   "text": "If the Client does not perform a responsibility on time, IBM will notify the Client, and the parties will use the change control procedure in Section 10 to address any resulting effect on schedule, fees or Deliverables."
+  },
+  "s6_1": {
+   "sec": "6.1",
+   "text": "Before the Project Start Date, the Client will: (a) execute a Business Associate Agreement with IBM covering the Services; (b) name the Client roles listed in Section 8.2; and (c) issue Client network accounts for the IBM team members named in the integrated plan. If these conditions are not met by January 4, 2027, the Project Start Date will move to the Monday after they are met."
+  },
+  "s6_2a": {
+   "sec": "6.2(a)",
+   "text": "Within 10 business days after the Project Start Date, the Client will provide IBM with read-only access to UM Platform event logs and prior authorization case history for at least the 24 months before the Project Start Date, including service codes, diagnosis codes, request channel, status changes and timestamps."
+  },
+  "s6_2b": {
+   "sec": "6.2(b)",
+   "text": "By Week 14, the Client will provide a test environment of the UM Platform with REST API access enabled and with test data that does not contain production protected health information, or that is approved for test use by the Client's Privacy Office."
+  },
+  "s6_2c": {
+   "sec": "6.2(c)",
+   "text": "The Client will complete its security review of the solution architecture within 15 business days after IBM submits D6."
+  },
+  "s6_2d": {
+   "sec": "6.2(d)",
+   "text": "The Client will manage its relationship with the UM Platform vendor and the Interop Vendor, and will ensure their participation in design and testing activities as needed."
+  },
+  "s6_3a": {
+   "sec": "6.3(a)",
+   "text": "The Client will make the Clinical Policy Owner available for at least 20% of his or her working time during Phases 2 and 3, and will make decisions on clinical policy questions within 5 business days of a request."
+  },
+  "s6_3b": {
+   "sec": "6.3(b)",
+   "text": "The Client will make at least six nurse reviewers and four intake coordinators available as subject matter experts for up to four hours per week each during Phases 1 and 2, and will provide at least 15 UM staff for user acceptance testing during Weeks 21 and 22."
+  },
+  "s6_3c": {
+   "sec": "6.3(c)",
+   "text": "The Client will provide up to 40 super users for train-the-trainer sessions and will deliver end-user training to the remaining UM staff before each go-live."
+  },
+  "s6_3d": {
+   "sec": "6.3(d)",
+   "text": "The Client is responsible for any consultation with employees or their representatives about changes to roles, staffing levels or work assignments arising from the Project."
+  },
+  "s6_3e": {
+   "sec": "6.3(e)",
+   "text": "The Client will administer the provider pulse survey used for Success Measure (g) in Week 3 and Week 30."
+  },
+  "s6_4": {
+   "sec": "6.4",
+   "text": "The Client will review each Deliverable and either accept it or provide a written description of any nonconformity with its acceptance criteria within 5 business days after IBM submits it."
+  },
+  "s7_run": {
+   "sec": "7",
+   "text": "The Project will run for 32 weeks, from January 11, 2027 to August 20, 2027."
+  },
+  "s7_deps": {
+   "sec": "7",
+   "text": "D9, D10 and D11 depend on D8, and D11 also depends on the test environment in Section 6.2(b)"
+  },
+  "s7_monday": {
+   "sec": "7",
+   "text": "Each go-live will be scheduled for a Monday and will be followed by a two-week period during which IBM provides elevated support."
+  },
+  "s8_1": {
+   "sec": "8.1",
+   "text": "IBM will provide the following key personnel: Kavita Menon, Partner and Engagement Executive; David Lund, Engagement Manager; Ben Ochoa, Process Studio and Process Mining Lead; Sofia Marquez, AI Solution Lead; Arjun Patel, Integration Architect; and Hannah Kim, Change and Adoption Lead."
+  },
+  "s8_1team": {
+   "sec": "8.1",
+   "text": "IBM will staff the Project with a team of approximately 14 people at peak, including onshore and offshore resources."
+  },
+  "s8_1keep": {
+   "sec": "8.1",
+   "text": "IBM will not reassign the Engagement Manager or the AI Solution Lead during Phases 2 and 3 without the Client's consent, which will not be unreasonably withheld, except for reasons outside IBM's reasonable control."
+  },
+  "s8_2a": {
+   "sec": "8.2",
+   "text": "Executive Sponsor, Dr. Renata Okafor, Chief Medical Officer of the Plan; Client Project Manager, Marcus Hale, Director of UM Operations; Clinical Policy Owner, Dr. Priya Raman, Medical Director, Utilization Management; IT Lead, Elena Sorvino, Vice President, Enterprise Applications; Provider Adoption Lead, Tom Brandt, Director of Provider Network Services; Compliance Advisor, Janelle Price, Plan Compliance Officer"
+  },
+  "s8_2uat": {
+   "sec": "8.2",
+   "text": "Client UM Lead for UAT, to be named by the Client Project Manager by Week 18."
+  },
+  "s8_3a": {
+   "sec": "8.3(a)",
+   "text": "Executive Steering Committee. Meets monthly and at each governance milestone. Chaired by the Executive Sponsor; members include the Plan President, the IBM Partner, the Engagement Manager, the Client Project Manager and the IT Lead. Approves governance milestones, changes to Design Principles, and change requests above $100,000 or affecting a go-live date."
+  },
+  "s8_3b": {
+   "sec": "8.3(b)",
+   "text": "Design Authority. Meets every two weeks during Phases 2 and 3. Co-chaired by the Clinical Policy Owner and IBM's AI Solution Lead; includes the IT Lead, Integration Architect, Compliance Advisor and Information Security. Approves architecture, rule logic, confidence thresholds and model changes."
+  },
+  "s8_3c": {
+   "sec": "8.3(c)",
+   "text": "Weekly Status Meeting. Chaired by the Engagement Manager and the Client Project Manager. Reviews progress, risks, issues, decisions and upcoming Client responsibilities."
+  },
+  "s8_3d": {
+   "sec": "8.3(d)",
+   "text": "Workstream Stand-ups. Held at least three times per week by each workstream lead."
+  },
+  "s8_4a": {
+   "sec": "8.4",
+   "text": "Issues that cannot be resolved by workstream leads within 2 business days will be escalated to the Engagement Manager and the Client Project Manager."
+  },
+  "s8_4b": {
+   "sec": "8.4",
+   "text": "Issues they cannot resolve within 3 business days will be escalated to the Executive Steering Committee, which will meet within 5 business days if a regular meeting is not scheduled. Issues the Executive Steering Committee cannot resolve will be handled under the dispute resolution provisions of the Agreement."
+  },
+  "s9intro": {
+   "sec": "9",
+   "text": "If an assumption proves incorrect, either party may request a change under Section 10."
+  },
+  "s9a": {
+   "sec": "9(a)",
+   "text": "Pilot volume will not exceed 4,500 prior authorization requests per week."
+  },
+  "s9b": {
+   "sec": "9(b)",
+   "text": "The UM Platform's existing REST APIs support creating, updating and retrieving cases and attachments without custom development by the UM Platform vendor."
+  },
+  "s9c": {
+   "sec": "9(c)",
+   "text": "At least 85% of historical prior authorization records contain structured service codes and diagnosis codes."
+  },
+  "s9d": {
+   "sec": "9(d)",
+   "text": "The rollout will consist of the pilot and up to two additional waves."
+  },
+  "s9e": {
+   "sec": "9(e)",
+   "text": "IBM watsonx will be deployed in a Client-approved IBM Cloud region, and the Client's subscription will be active by Week 10."
+  },
+  "s9f": {
+   "sec": "9(f)",
+   "text": "Submitted documents and Deliverables will be in English."
+  },
+  "s9g": {
+   "sec": "9(g)",
+   "text": "IBM will perform the Services primarily remotely, with up to 30% of team time on-site at the Riverbend Campus during workshops, testing and go-lives."
+  },
+  "s9h": {
+   "sec": "9(h)",
+   "text": "The Client's licensed clinical criteria content may be used by automated rules under the Client's existing license."
+  },
+  "s9i": {
+   "sec": "9(i)",
+   "text": "There will be no more than two rounds of review for each document Deliverable."
+  },
+  "s10a": {
+   "sec": "10",
+   "text": "IBM will provide a written impact assessment, describing the effect on scope, schedule, fees and risk, within 5 business days."
+  },
+  "s10b": {
+   "sec": "10",
+   "text": "PCRs above $100,000 or that change a go-live date require approval by the Executive Steering Committee."
+  },
+  "s10c": {
+   "sec": "10",
+   "text": "Time spent preparing impact assessments of more than 8 hours for a single PCR will be billed at the rates in Section 11.3 if the Client approves the assessment work in advance."
+  },
+  "s11_1": {
+   "sec": "11.1",
+   "text": "The Services in this SOW will be provided for a fixed fee of $4,860,000 (the \"Fixed Fee\"), payable on achievement of the following payment milestones:"
+  },
+  "s11_1a": {
+   "sec": "11.1(a)",
+   "text": "Acceptance of D1, Project Charter and Integrated Plan: $486,000 (10%)."
+  },
+  "s11_1b": {
+   "sec": "11.1(b)",
+   "text": "Completion of D3, Discovery Sign-off: $729,000 (15%)."
+  },
+  "s11_1c": {
+   "sec": "11.1(c)",
+   "text": "Completion of D8, Design Approval: $972,000 (20%)."
+  },
+  "s11_1d": {
+   "sec": "11.1(d)",
+   "text": "Completion of D14, Pilot Go/No-Go Decision: $972,000 (20%)."
+  },
+  "s11_1e": {
+   "sec": "11.1(e)",
+   "text": "Completion of D19, Full Go-Live: $972,000 (20%)."
+  },
+  "s11_1f": {
+   "sec": "11.1(f)",
+   "text": "Final Acceptance (acceptance of D21): $729,000 (15%)."
+  },
+  "s11_2": {
+   "sec": "11.2",
+   "text": "Expenses will not exceed 7% of the Fixed Fee ($340,200) without the Client's prior written approval."
+  },
+  "s11_3": {
+   "sec": "11.3",
+   "text": "At the Client's option, exercised in writing by Week 30, IBM will provide up to eight additional weeks of hypercare support on a time and materials basis at a blended rate of $210 per hour, not to exceed $420,000."
+  },
+  "s11_4": {
+   "sec": "11.4",
+   "text": "IBM will invoice each payment milestone upon its achievement. Invoices are due within 45 days of the invoice date. Disputed amounts must be identified in writing within 15 days of the invoice date."
+  },
+  "s12fix": {
+   "sec": "12",
+   "text": "IBM will correct any nonconformity and resubmit the Deliverable, and the review period will restart."
+  },
+  "s12deemed": {
+   "sec": "12",
+   "text": "A Deliverable will be deemed accepted if the Client does not provide a written description of nonconformity within the review period, or if the Client uses the Deliverable in production."
+  },
+  "s12gov": {
+   "sec": "12",
+   "text": "Governance milestones (D3, D8, D14 and D16) are completed when the relevant forum records its decision, or, if the forum does not meet within 5 business days of IBM's request, when IBM has satisfied the entry criteria documented in D1."
+  },
+  "s13": {
+   "sec": "13",
+   "text": "This SOW begins on the SOW Date and ends on Final Acceptance or August 31, 2027, whichever comes first, unless extended by a PCR or by the Client's exercise of the option in Section 11.3."
+  }
+ },
+ "slip_rules": [
+  {
+   "when": "any",
+   "text": "IBM notifies LVH, and the effect on schedule, fees or deliverables goes through change control.",
+   "src": [
+    "s6intro"
+   ]
+  },
+  {
+   "when": "golive_moves",
+   "text": "Moving a go-live date is a PCR that needs Executive Steering Committee approval.",
+   "src": [
+    "s10b"
+   ]
+  },
+  {
+   "when": "term_breach",
+   "text": "Final Acceptance would land after the SOW term ends. Extend the term with a PCR or the hypercare option.",
+   "src": [
+    "s13"
+   ]
+  }
+ ],
+ "slip_presets": [
+  {
+   "label": "Security review takes its full 15 days",
+   "target": "CD3",
+   "weeks": 2
+  },
+  {
+   "label": "Event logs arrive 3 weeks late",
+   "target": "CD1",
+   "weeks": 3
+  },
+  {
+   "label": "Test environment 2 weeks late",
+   "target": "CD6",
+   "weeks": 2
+  },
+  {
+   "label": "Start conditions slip 2 weeks",
+   "target": "CD0",
+   "weeks": 2
+  },
+  {
+   "label": "UAT runs long",
+   "target": "D13",
+   "weeks": 2
+  }
+ ]
+}
